@@ -36,17 +36,20 @@ namespace India.Agency.Websites
                 "~/Content/Bootstrap/CSS/bootstrap.css",
                 "~/Content/Fanex.Grid/Fanex.Grid.css",
                 "~/Content/Fanex.Grid/Fanex.Pagination.css",
+                "~/Content/msdropdown/dd.css",
                 "~/Content/Themes/custom.less",
                 "~/Content/Themes/style.less");
 
             bundles.Add(new ScriptBundle("~/scripts/headjs").Include(
-                "~/Scripts/HeadJs/head.min.js"));
+                "~/Scripts/HeadJs/head.min.js",
+                "~/Scripts/RespondJs/respond.min.js"));
 
             bundles.Add(new ScriptBundle("~/scripts/common").Include(
                 "~/Scripts/jQuery/jQuery.js",
                 "~/Scripts/Bootstrap/bootstrap.js",
                 "~/Scripts/Fanex.Grid/Fanex.Grid.js",
-                "~/Scripts/Fanex.Grid/Fanex.Pagination.js"));
+                "~/Scripts/Fanex.Grid/Fanex.Pagination.js",
+                "~/Scripts/msdropdown/jquery.dd.js"));
         }
     }
 }

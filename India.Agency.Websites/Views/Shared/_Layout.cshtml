@@ -4,8 +4,101 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    @Styles.Render("~/styles/common")
+    @Scripts.Render("~/scripts/headjs")
 </head>
 <body>
-    @RenderBody()
+    <div class="container-fluid page">
+        <header class="header">
+            <div class="topHeader">
+                <a class="logo" href="#"></a>
+                <div class="banner">
+                    <ul class="list-unstyled list-inline info">
+                        <li class="username">
+                            <span class="icon-username"></span>
+                            <ul class="userInfo list-unstyled">
+                                <li class="avatar">Welcome <br /> <span class="username">Alice</span></li>
+                                <li><a href="#"><span class="icon-profile"></span> Profile Setting</a></li>
+                                <li><a href="#"><span class="icon-changePass"></span> Change Password</a></li>
+                                <li><a href="#"><span class="icon-signOut"></span> Sign Out</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="numberMessage">
+                                <span class="icon-message"></span>
+                                <span class="number">12</span>
+                            </div>
+                        </li>
+                        <li><span class="icon-help"></span></li>
+                        <li class="flagList">
+                            <select name="countries" id="selLanguage" class="selLanguage" style="width:300px;">
+                                  <option value='in' data-image="/content/themes/images/flags/blank.gif" data-imagecss="flag in" data-title="English">हिन्दी</option>
+                                  <option value='en' data-image="/content/themes/images/flags/blank.gif" data-imagecss="flag en" data-title="English">English</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <marquee behavior="scroll" direction="left" class="message">
+                        <span class="icon-notice"></span>
+                        [Bingo] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9] are considered REFUNDED. Sorry for the inconveniences caused!
+                    </marquee>
+                </div>
+            </div>
+            <div class="bottomHeader">
+                <div class="search">
+                    <input type="text" class="txtSearch" placeholder="Usernane" />
+                    <span class="icon-collapse"></span>
+                </div>
+                <div class="rightHeader">
+                    <ul class="list-unstyled list-inline topMenu">
+                        <li><a href="#" class="current">Home</a></li>
+                        <li>Report
+                            <ul class="list-unstyled subMenu">
+                                <li><a href="#">Report 01</a></li>
+                                <li><a href="#">Report 01</a></li>
+                                <li><a href="#">Report 01</a></li>
+                                <li><a href="#">Report 01</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Customer management</a></li>
+                        <li><a href="#">Total Bet & Forecast</a></li>
+                    </ul>
+                    <div class="dateTime">3:28:19 AM Sept 3, 2013 GMT-4</div>
+                </div>
+            </div>
+        </header>
+        <section class="content">
+            <div class="leftPanel">
+                <div class="container">
+                    <div class="row title">Customer Info</div>
+                    <div class="row"></div>
+                </div>
+                <div class="container">
+                    <div class="row title">Customer Balance</div>
+                    <div class="row"></div>
+                </div>
+                <ul class="container list-unstyled featureList">
+                    <li><a href="#"><span class="icon-newCustomer"></span>New Customer</a></li>
+                    <li><a href="#"><span class="icon-infoCustomer"></span>Customer Info</a></li>
+                    <li><a href="#"><span class="icon-password"></span>Reset Password</a></li>
+                    <li><a href="#"><span class="icon-cricket"></span>Cricket</a></li>
+                    <li><a href="#"><span class="icon-sportbook"></span>Sportbook</a></li>
+                    <li><a href="#"><span class="icon-positionTaking"></span>View Position Taking</a></li>
+                    <li><a href="#"><span class="icon-commission"></span>View Commission</a></li>
+                </ul>
+            </div>
+            <div class="rightPanel">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </section>
+    </div>
+    @Scripts.Render("~/scripts/common")
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            $("select").msDropdown({ roundedBorder: false });
+        });
+        //
+    </script>
 </body>
 </html>

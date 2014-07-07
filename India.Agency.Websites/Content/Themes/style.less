@@ -33,7 +33,7 @@ body {
 }
 
 .icon {
-    background: url(Images/sprites.png) no-repeat;
+    background: url(images/sprites.png) no-repeat;
     display: inline-block;
     cursor: pointer;
 }
@@ -42,19 +42,19 @@ body {
 .header {
     height: 90px;
     top: 0;
-    background: url(Images/bg-header.jpg) left top no-repeat #072655;
+    background: url(images/bg-header.jpg) left top no-repeat #072655;
 
     .topHeader {
         height: 60px;
         position: relative;
 
         .logo {
-            background: url(Images/logo.png) center no-repeat;
+            background: url(images/logo.png) center no-repeat;
             height: 100%;
         }
 
         .banner {
-            background: url(Images/bg-banner.jpg) no-repeat left center;
+            background: url(images/bg-banner.jpg) no-repeat left center;
             height: 100%;
 
             .info {
@@ -71,6 +71,94 @@ body {
 
                     &.username {
                         border-left: none;
+                        padding: 0 8px;
+                        position: relative;
+
+                        &:hover .userInfo {
+                            display: block;
+                        }
+
+                        .userInfo {
+                            position: absolute;
+                            right: 0;
+                            top: 30px;
+                            background-color: #fff;
+                            z-index: 800;
+                            border: 1px solid @border-color;
+                            color: #777;
+                            display: none;
+
+                            .avatar {
+                                background: url(images/avatar.png) 10px 12px no-repeat;
+                                width: 35px;
+                                padding: 10px 5px 10px 50px;
+
+                                .username {
+                                    color: #e94b35;
+                                    font-weight: bold;
+                                }
+
+                                &:hover {
+                                    background: url(images/avatar.png) 10px 12px no-repeat;
+                                }
+                            }
+
+                            li {
+                                white-space: nowrap;
+                                border: none;
+                                border-top: 1px solid @border-color;
+                                padding: 5px 15px;
+                                width: 100%;
+
+                                &:hover {
+                                    background-color: #f0f0f0;
+
+                                    a:hover {
+                                        text-decoration: none;
+                                        color: @link-color;
+                                    }
+                                }
+
+                                a {
+                                    color: #777;
+                                    vertical-align: middle;
+                                }
+
+                                .icon-profile, .icon-changePass, .icon-signOut {
+                                    .icon;
+                                    height: 15px;
+                                    width: 15px;
+                                    margin-right: 2px;
+                                }
+
+                                .icon-profile {
+                                    background-position: -9px -26px;
+                                }
+
+                                .icon-changePass {
+                                    background-position: -32px -26px;
+                                }
+
+                                .icon-signOut {
+                                    background-position: -58px -27px;
+                                    margin-top: 2px;
+                                }
+                            }
+
+                            &:after {
+                                border-color: #fff rgba(0, 0, 0, 0);
+                                border-style: solid;
+                                border-width: 0 14px 13px;
+                                content: "";
+                                display: block;
+                                left: 79%;
+                                margin-left: 0;
+                                position: absolute;
+                                top: -8px;
+                                width: 0;
+                                z-index: 1;
+                            }
+                        }
                     }
 
                     &.flagList {
@@ -80,7 +168,7 @@ body {
 
                 .icon-username {
                     .icon;
-                    background-position: -5px -7px;
+                    background-position: -7px -7px;
                     width: 16px;
                     height: 12px;
                     margin-top: 9px;
@@ -91,7 +179,7 @@ body {
                     .icon;
                     background-position: -29px -6px;
                     height: 16px;
-                    margin: 7px 15px 0 0;
+                    margin: 7px 11px 0 0;
                     width: 23px;
                     display: block;
                 }
@@ -118,7 +206,7 @@ body {
 
                 .icon-english {
                     .icon;
-                    background: url(Images/language.png) no-repeat;
+                    background: url(images/language.png) no-repeat;
                     height: 17px;
                     width: 22px;
                     float: left;
@@ -130,10 +218,10 @@ body {
                     .number {
                         background-color: #ea5e51;
                         border-radius: 18px;
-                        padding: 0 4px;
+                        padding: 0px 5px;
                         color: #fff;
                         font-size: 9px;
-                        right: 5px;
+                        right: 0;
                         top: -5px;
                         position: absolute;
                     }
@@ -142,7 +230,7 @@ body {
 
             marquee.message {
                 color: #fff;
-                margin-top: 10px;
+                margin-top: 7px;
 
                 .icon-notice {
                     .icon;
@@ -165,7 +253,7 @@ body {
             background-color: #718ca9;
 
             .txtSearch {
-                background: url(Images/icon-search.png) 10px center no-repeat;
+                background: url(images/icon-search.png) 10px center no-repeat;
                 width: 200px;
                 background-color: #859cb4;
                 height: 29px;
@@ -179,7 +267,7 @@ body {
                 background-position: -144px -27px;
                 height: 10px;
                 width: 12px;
-                margin-left: 5px;
+                margin-left: 7px;
             }
         }
 
@@ -190,14 +278,79 @@ body {
             .topMenu {
                 float: left;
                 margin: 5px 10px 6px 10px;
+                text-transform: uppercase;
 
                 a {
                     color: #fff;
-                    text-transform: uppercase;
 
                     &:hover {
                         text-decoration: none;
-                        color: #ffefab;
+                        color: #ffc000;
+                    }
+
+                    &.current {
+                        font-weight: bold;
+                        color: #ffc000;;
+                    }
+                }
+
+                li {
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #ffc000;
+
+                        .subMenu {
+                            display: block;
+                        }
+                    }
+
+                    .subMenu {
+                        position: absolute;
+                        top: 25px;
+                        left: 0;
+                        background-color: #fff;
+                        border: 1px solid @border-color;
+                        z-index: 500;
+                        padding-top: 5px;
+                        display: none;
+
+                        li {
+                            padding: 5px 15px;
+                            border-top: 1px solid @border-color;
+
+                            &:hover {
+                                background-color: #f0f0f0;
+                            }
+
+                            &:first-child {
+                                border-top: none;
+                            }
+                        }
+
+                        a {
+                            color: #777;
+                            white-space: nowrap;
+
+                            &:hover {
+                                color: @link-color;
+                            }
+                        }
+
+                        &:after {
+                            border-color: #fff rgba(0, 0, 0, 0);
+                            border-style: solid;
+                            border-width: 0 14px 13px;
+                            content: "";
+                            display: block;
+                            left: 5%;
+                            margin-left: 0;
+                            position: absolute;
+                            top: -8px;
+                            width: 0;
+                            z-index: 1;
+                        }
                     }
                 }
             }
@@ -209,6 +362,8 @@ body {
             }
         }
     }
+
+    
 }
 
 /* Content */
@@ -221,7 +376,7 @@ body {
     bottom: 0;
 
     .leftPanel {
-        background: url(Images/bg-leftPanel.jpg) #44546d center top no-repeat;
+        background: url(images/bg-leftPanel.jpg) #44546d center top no-repeat;
         top: 0;
         bottom: 0;
         display: block;
@@ -324,20 +479,21 @@ body {
     }
 
     .rightPanel {
-        overflow: auto;
         top: 0;
         bottom: 0;
+        overflow: auto;
+        background-color: #f3f5f8;
 
         .breadcrumb {
             background: none;
             border-bottom: 1px solid @border-color;
-            margin-bottom: 15px;
+            margin-bottom: 0;
             padding: 5px 10px;
             color: #727983;
 
             li + li:before {
                 content: "";
-                background: url(Images/icon-arrow-left.png) 0 5px no-repeat;
+                background: url(images/icon-arrow-left.png) 0 5px no-repeat;
                 padding: 0 7px;
             }
 
@@ -349,12 +505,17 @@ body {
             }
         }
 
+        .contentContainer {
+            margin-top: 15px;
+        }
+
         /* Dashborad */
         .col {
             padding: 0;
         }
 
         .block {
+            background-color: #fff;
             border: 1px solid @border-color;
             border-top: 3px solid #0aa699;
             padding: 17px 15px;
@@ -371,7 +532,7 @@ body {
                 .levelList {
                     line-height: 24px;
                     a {
-                        color: #0090d9;
+                        color: @link-color;
                     }
                 }
             }

@@ -207,6 +207,10 @@
     <Content Include="Content\Fanex.Grid\Images\sorting_bg.gif" />
     <Content Include="Content\Fanex.Grid\Images\sorting_desc.gif" />
     <Content Include="Content\Fanex.Grid\Images\white-top-bottom.gif" />
+    <Content Include="Content\msdropdown\dd.css" />
+    <Content Include="Content\msdropdown\skin1\dd_arrow.gif" />
+    <Content Include="Content\msdropdown\skin1\title-bg.gif" />
+    <Content Include="Content\Themes\Images\avatar.png" />
     <Content Include="Content\Themes\Images\bg-banner.jpg" />
     <Content Include="Content\Themes\Images\bg-header.jpg" />
     <Content Include="Content\Themes\Images\bg-leftPanel.jpg" />
@@ -235,6 +239,8 @@
     <Content Include="Scripts\HeadJs\head.min.js" />
     <Content Include="Scripts\jQuery\jQuery.js" />
     <Content Include="Scripts\MomentJs\moment-langues.js" />
+    <Content Include="Scripts\msdropdown\jquery.dd.js" />
+    <Content Include="Scripts\msdropdown\jquery.dd.min.js" />
     <Content Include="Scripts\NiceScroll\jquery.nicescroll.min.js" />
     <Content Include="Scripts\NumeralJs\numeral.js" />
     <Content Include="Scripts\RespondJs\respond.min.js" />
