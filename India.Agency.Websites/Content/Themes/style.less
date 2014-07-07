@@ -42,7 +42,7 @@ body {
     position: absolute;
     background-color: #fff;
     border: 1px solid @border-color;
-    color: #777;
+    color: #666;
     .box-shadow(0px 1px 3px #e3e3e3);
 
 
@@ -63,7 +63,7 @@ body {
         }
 
         a {
-            color: #777;
+            color: #666;
             vertical-align: middle;
         }
 
@@ -175,6 +175,53 @@ body {
 
                     &.flagList {
                         padding: 0;
+                        color: #fff;
+                        position: relative;
+                        width: 100px;
+                        cursor: pointer;
+
+                        .flag {
+                            float:left;
+                            padding: 5px 20px 5px 33px;
+                            background: url(images/flags/flags.png) no-repeat;
+
+                            &.en {
+                                background-position: 6px 6px;
+                            }
+
+                            &.in {
+                                background-position: 6px -37px;
+                            }
+
+                            &.active {
+                                width: 110px;
+                            }
+                        }
+
+                        &:hover .list {
+                            display: block;
+                        }
+
+                        .list {
+                            .hoverLayer;
+                            top: 30px;
+                            left: 0;
+                            right: 0;
+                            z-index: 500;
+                            display: none;
+
+                            li {
+                                padding: 5px 20px 5px 33px;
+                            }
+                        }
+
+                        .icon-arrow-down {
+                            background: url(images/sprites.png) -86px -4px no-repeat;
+                            height: 10px;
+                            width: 8px;
+                            margin-left: 5px;
+                            display: inline-block;
+                        }
                     }
                 }
 
