@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
 }
@@ -36,6 +36,41 @@ body {
     background: url(images/sprites.png) no-repeat;
     display: inline-block;
     cursor: pointer;
+}
+
+.hoverLayer{
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid @border-color;
+    color: #777;
+    .box-shadow(0px 1px 3px #e3e3e3);
+
+
+    li {
+        white-space: nowrap;
+        border: none;
+        border-top: 1px solid @border-color;
+        padding: 5px 15px;
+        width: 100%;
+
+        &:hover {
+            background-color: #f0f0f0;
+
+            a:hover {
+                text-decoration: none;
+                color: @link-color;
+            }
+        }
+
+        a {
+            color: #777;
+            vertical-align: middle;
+        }
+
+        &:first-child {
+            border-top: none;
+        }
+    }
 }
 
 /* Header */
@@ -79,13 +114,10 @@ body {
                         }
 
                         .userInfo {
-                            position: absolute;
+                            .hoverLayer;
                             right: 0;
                             top: 30px;
-                            background-color: #fff;
                             z-index: 800;
-                            border: 1px solid @border-color;
-                            color: #777;
                             display: none;
 
                             .avatar {
@@ -104,26 +136,6 @@ body {
                             }
 
                             li {
-                                white-space: nowrap;
-                                border: none;
-                                border-top: 1px solid @border-color;
-                                padding: 5px 15px;
-                                width: 100%;
-
-                                &:hover {
-                                    background-color: #f0f0f0;
-
-                                    a:hover {
-                                        text-decoration: none;
-                                        color: @link-color;
-                                    }
-                                }
-
-                                a {
-                                    color: #777;
-                                    vertical-align: middle;
-                                }
-
                                 .icon-profile, .icon-changePass, .icon-signOut {
                                     .icon;
                                     height: 15px;
@@ -258,7 +270,7 @@ body {
                 background-color: #859cb4;
                 height: 29px;
                 border: none;
-                color: #fff;
+                color: #dee6ef;
                 padding: 5px 5px 5px 34px;
             }
 
@@ -277,7 +289,7 @@ body {
 
             .topMenu {
                 float: left;
-                margin: 5px 10px 6px 10px;
+                margin: 0;
                 text-transform: uppercase;
 
                 a {
@@ -287,16 +299,12 @@ body {
                         text-decoration: none;
                         color: #ffc000;
                     }
-
-                    &.current {
-                        font-weight: bold;
-                        color: #ffc000;;
-                    }
                 }
 
                 li {
                     position: relative;
                     cursor: pointer;
+                    padding: 5px 10px 6px;
 
                     &:hover {
                         color: #ffc000;
@@ -306,36 +314,25 @@ body {
                         }
                     }
 
+                    &.current {
+                        background-color: #F3F5F8;
+                        color: @link-color;
+
+                        a {
+                            color: @link-color;
+                        }
+                    }
+
                     .subMenu {
-                        position: absolute;
-                        top: 25px;
+                        .hoverLayer;
+                        top: 30px;
                         left: 0;
-                        background-color: #fff;
-                        border: 1px solid @border-color;
                         z-index: 500;
                         padding-top: 5px;
                         display: none;
 
-                        li {
-                            padding: 5px 15px;
-                            border-top: 1px solid @border-color;
-
-                            &:hover {
-                                background-color: #f0f0f0;
-                            }
-
-                            &:first-child {
-                                border-top: none;
-                            }
-                        }
-
                         a {
-                            color: #777;
-                            white-space: nowrap;
-
-                            &:hover {
-                                color: @link-color;
-                            }
+                            text-transform: none;
                         }
 
                         &:after {
