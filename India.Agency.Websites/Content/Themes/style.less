@@ -20,14 +20,14 @@ body {
 }
 
 .logo, .search, .leftPanel {
-    width: 230px;
+    width: @left-panel-width;
     position: absolute;
     left: 0;
 }
 
 .banner, .rightHeader, .rightPanel {
     position: absolute;
-    left: 230px;
+    left: @left-panel-width;
     right: 0;
 }
 
@@ -162,13 +162,13 @@ body {
                             &:after {
                                 border-color: #fff rgba(0, 0, 0, 0);
                                 border-style: solid;
-                                border-width: 0 14px 13px;
+                                border-width: 0 6px 6px;
                                 content: "";
                                 display: block;
-                                left: 79%;
+                                left: 85.5%;
                                 margin-left: 0;
                                 position: absolute;
-                                top: -8px;
+                                top: -5px;
                                 width: 0;
                                 z-index: 1;
                             }
@@ -384,26 +384,45 @@ body {
 
                     .subMenu {
                         .hoverLayer;
+                        background-color: #adc2de;
+                        border: none;
                         top: 30px;
-                        left: 0;
+                        left: -3px;
                         z-index: 500;
                         padding-top: 5px;
                         display: none;
+                        .box-shadow(none);
+
+                        li {
+                            border: none;
+
+                            &:hover {
+                                background-color: #d6e4f5;
+
+                                a {
+                                    color: @link-color;
+                                }
+                            }
+
+                            a {
+                                color: #fff;
+                            }
+                        }
 
                         a {
                             text-transform: none;
                         }
 
                         &:after {
-                            border-color: #fff rgba(0, 0, 0, 0);
+                            border-color: #adc2de rgba(0, 0, 0, 0);
                             border-style: solid;
-                            border-width: 0 14px 13px;
+                            border-width: 0 6px 6px;
                             content: "";
                             display: block;
-                            left: 5%;
+                            left: 20px;
                             margin-left: 0;
                             position: absolute;
-                            top: -8px;
+                            top: -5px;
                             width: 0;
                             z-index: 1;
                         }
@@ -537,161 +556,48 @@ body {
     .rightPanel {
         top: 0;
         bottom: 0;
-        overflow: auto;
         background-color: #f3f5f8;
 
-        .breadcrumb {
-            background: none;
-            border-bottom: 1px solid @border-color;
-            margin-bottom: 0;
-            padding: 5px 10px;
-            color: #727983;
-
-            li + li:before {
-                content: "";
-                background: url(images/icon-arrow-left.png) 0 5px no-repeat;
-                padding: 0 7px;
-            }
-
-            .icon-home {
-                .icon;
-                background-position: -143px -4px;
-                width: 14px;
-                height: 15px;
-            }
+        &.expandRight {
+            left: 0;
         }
 
-        .contentContainer {
-            margin-top: 15px;
-        }
-
-        /* Dashborad */
-        .col {
-            padding: 0;
-        }
-
-        .block {
-            background-color: #fff;
-            border: 1px solid @border-color;
-            border-top: 3px solid #0aa699;
-            padding: 17px 15px;
-            color: #727983;
-            margin: 0 15px 15px 0;
-
-            &.hierarchy {
-                border-top-color: #f2c500;
-
-                .row-block.lastRow {
-                    margin-bottom: 23px;
-                }
-
-                .levelList {
-                    line-height: 24px;
-                    a {
-                        color: @link-color;
-                    }
-                }
-            }
-
-            &.statistic {
-                border-top-color: #0090d9;
-            }
-
-            &.chart {
-                border-top-color: #f25f51;
-
-                .title {
-                    padding: 0;
-                    float: left;
-                }
-
-                .listTab {
-                    float: right;
-                    .border-radius(3px);
-                    background-color: #e3e3e3;
-
-                    li {
-                        padding: 2px 7px;
-                        float: left;
-
-                        a {
-                            color: #727983;
-                        }
-
-                        &.active {
-                            background-color: #d7d7d7;
-                        }
-
-                        &:hover {
-                            background-color: #d7d7d7;
-
-                            a {
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-            }
-
-            &.announcement {
-                border-top-color: #959595;
-            }
-
-            .title {
-                text-transform: uppercase;
-                color: #464646;
-                padding: 0 10px;
-                margin-bottom: 20px;
-            }
-
-            .row-block {
-                padding: 5px 10px;
-                border-bottom: 1px solid @border-color;
-                clear: both;
-
-                &.topBorder {
-                    border-top: 1px solid @border-color;
-                }
-
-                &.noBorder {
-                    border: none;
-                }
-
-                &.lastRow {
-                    margin-bottom: 20px;
-                }
-
-                .txtRed {
-                    color: #e94b35;
-                }
-
-                .txtGreen {
-                    color: #0aa699;
-                }
-            }
-
-            .total {
-                display: table;
-                margin-top: 20px;
-                font-size: @font-size + 3;
-
-                li {
-                    display: table-cell;
-                }
-
-                .money {
-                    font-size: @font-size + 9;
-                    margin-top: 3px;
-
-                    .number {
-                        color: #0aa699;
-                        display: inline-block;
-                        margin-right: 5px;
-                    }
-                }
-            }
+        &.collapseRight {
+            left: @left-panel-width;
         }
     }
+}
+
+/* Common */
+.breadcrumb {
+    background: none;
+    border-bottom: 1px solid @border-color;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    color: #727983;
+
+    li + li:before {
+        content: "";
+        background: url(images/icon-arrow-left.png) 0 5px no-repeat;
+        padding: 0 7px;
+    }
+
+    .icon-home {
+        .icon;
+        background-position: -143px -4px;
+        width: 14px;
+        height: 15px;
+    }
+}
+
+.contentContainer {
+    padding-top: 15px;
+    background-color: #f3f5f8;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 870px) { 

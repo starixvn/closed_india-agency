@@ -1,0 +1,128 @@
+@import "../../../../content/themes/variables.less";
+@import "../../../../content/themes/mixins.less";
+
+.col {
+    padding: 0;
+}
+
+.block {
+    background-color: #fff;
+    border: 1px solid @border-color;
+    border-top: 3px solid #0aa699;
+    padding: 17px 15px;
+    color: #727983;
+    margin: 0 15px 15px 0;
+
+    &.hierarchy {
+        border-top-color: #f2c500;
+
+        .row-block.lastRow {
+            margin-bottom: 23px;
+        }
+
+        .levelList {
+            line-height: 24px;
+            a {
+                color: @link-color;
+            }
+        }
+    }
+
+    &.statistic {
+        border-top-color: #0090d9;
+    }
+
+    &.chart {
+        border-top-color: #f25f51;
+
+        .title {
+            padding: 0;
+            float: left;
+        }
+
+        .listTab {
+            float: right;
+            .border-radius(3px);
+            background-color: #e3e3e3;
+
+            li {
+                padding: 2px 7px;
+                float: left;
+
+                a {
+                    color: #727983;
+                }
+
+                &.active {
+                    background-color: #d7d7d7;
+                }
+
+                &:hover {
+                    background-color: #d7d7d7;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.announcement {
+        border-top-color: #959595;
+    }
+
+    .title {
+        text-transform: uppercase;
+        color: #464646;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .row-block {
+        padding: 5px 10px;
+        border-bottom: 1px solid @border-color;
+        clear: both;
+
+        &.topBorder {
+            border-top: 1px solid @border-color;
+        }
+
+        &.noBorder {
+            border: none;
+        }
+
+        &.lastRow {
+            margin-bottom: 20px;
+        }
+
+        .txtRed {
+            color: #e94b35;
+        }
+
+        .txtGreen {
+            color: #0aa699;
+        }
+    }
+
+    .total {
+        display: table;
+        margin-top: 20px;
+        font-size: @font-size + 3;
+
+        li {
+            display: table-cell;
+        }
+
+        .money {
+            font-size: @font-size + 9;
+            margin-top: 3px;
+
+            .number {
+                color: #0aa699;
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+    }
+}
