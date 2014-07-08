@@ -37,6 +37,7 @@ namespace India.Agency.Websites
                 "~/styles/layout",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
                 "~/Content/Themes/icon.less",
+                "~/Content/Themes/common.less",
                 "~/Content/Themes/layout.less");
 
             bundles.Add(new ScriptBundle("~/scripts/headjs").Include(
@@ -58,6 +59,7 @@ namespace India.Agency.Websites
                 "~/styles/common",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
                 "~/Content/Themes/icon.less",
+                "~/Content/Themes/common.less",
                 "~/Content/Themes/content.less");
 
             bundles.AddAndInclude(

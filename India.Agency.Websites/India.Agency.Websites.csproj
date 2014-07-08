@@ -295,6 +295,7 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Content\Themes\icon.less" />
+    <None Include="Content\Themes\common.less" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\India.Agency.Account\India.Agency.Account.csproj">
