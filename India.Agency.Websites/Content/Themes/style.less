@@ -11,12 +11,12 @@ body {
 .page {
     position: relative;
     background-color: #04214e;
-}
-
-.header {
-    position: fixed;
+    bottom: 0;
     left: 0;
+    overflow: hidden;
+    position: absolute;
     right: 0;
+    top: 0;
 }
 
 .logo, .search, .leftPanel {
@@ -76,6 +76,9 @@ body {
 .header {
     height: 90px;
     top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
     background: url(images/bg-header.jpg) left top no-repeat #072655;
 
     .topHeader {
@@ -413,7 +416,7 @@ body {
 /* Content */
 
 .content {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 90px;
@@ -682,13 +685,8 @@ body {
     }
 }
 
-@media screen and (max-width: 650px) { 
-    .container-fluid.page {
-        overflow: auto;
-
-        .header, .content {
-            min-width: 850px;
-        }
-        
+@media screen and (max-width: 870px) { 
+    .page {
+        width: 870px;
     }
 }
