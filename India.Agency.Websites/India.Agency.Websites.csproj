@@ -256,11 +256,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Main\Views\Web.config" />
-    <Content Include="Areas\Main\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Main\Views\Home\Dashboard.cshtml" />
-    <Content Include="Areas\Main\Views\Home\_LeftPanel.cshtml" />
-    <Content Include="Areas\Main\Resources\Home\dashboard.less" />
+    <Content Include="Areas\Customer\Resources\Dashboard\dashboard.less" />
+    <Content Include="Areas\Customer\Views\Web.config" />
+    <Content Include="Areas\Customer\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Customer\Views\Dashboard\Index.cshtml" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -297,13 +296,17 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\India.Agency.Account\India.Agency.Account.csproj">
+      <Project>{04B003BD-EC89-49D1-971A-662C3572B6FD}</Project>
+      <Name>India.Agency.Account</Name>
+    </ProjectReference>
     <ProjectReference Include="..\India.Agency.Core\India.Agency.Core.csproj">
       <Project>{E6B6690C-CEB3-476B-A61D-974782D0FAB9}</Project>
       <Name>India.Agency.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\India.Agency.Main\India.Agency.Main.csproj">
-      <Project>{45C3E130-8FFB-4356-8446-29975A106380}</Project>
-      <Name>India.Agency.Main</Name>
+    <ProjectReference Include="..\India.Agency.Customer\India.Agency.Customer.csproj">
+      <Project>{2E859396-D87C-487A-B0CD-553E3289975E}</Project>
+      <Name>India.Agency.Customer</Name>
     </ProjectReference>
     <ProjectReference Include="..\India.Agency.Resources\India.Agency.Resources.csproj">
       <Project>{26523D25-A38A-4BD0-A4D2-119C8D311C41}</Project>

@@ -22,7 +22,29 @@ namespace India.Agency.Websites
         /// <param name="bundles">The bundle collection.</param>
         public static void RegisterBundles(BundleCollection bundles)
         {
+            RegisterLayoutBundles(bundles);
             RegisterCommonBundles(bundles);
+            RegisterCustomerBundles(bundles);
+        }
+
+        /// <summary>
+        /// Bundles JavaScript and LESS files for layout.
+        /// </summary>
+        /// <param name="bundles">The bundle collection.</param>
+        public static void RegisterLayoutBundles(BundleCollection bundles)
+        {
+            bundles.AddAndInclude(
+                "~/styles/layout",
+                "~/Content/Bootstrap/CSS/bootstrap.css",
+                "~/Content/Themes/style.less");
+
+            bundles.Add(new ScriptBundle("~/scripts/headjs").Include(
+                "~/Scripts/HeadJs/head.min.js",
+                "~/Scripts/RespondJs/respond.min.js"));
+
+            bundles.Add(new ScriptBundle("~/scripts/layout").Include(
+                "~/Scripts/jQuery/jQuery.js",
+                "~/Scripts/Bootstrap/bootstrap.js"));
         }
 
         /// <summary>
@@ -34,24 +56,26 @@ namespace India.Agency.Websites
             bundles.AddAndInclude(
                 "~/styles/common",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
-                "~/Content/Fanex.Grid/Fanex.Grid.css",
-                "~/Content/Fanex.Grid/Fanex.Pagination.css",
-                "~/Content/Themes/custom.less",
-                "~/Content/Themes/style.less");
+                "~/Content/Themes/custom.less");
 
             bundles.AddAndInclude(
                 "~/styles/dashboard",
-                "~/Areas/Main/Resources/Home/dashboard.less");
-
-            bundles.Add(new ScriptBundle("~/scripts/headjs").Include(
-                "~/Scripts/HeadJs/head.min.js",
-                "~/Scripts/RespondJs/respond.min.js"));
+                "~/Areas/Customer/Resources/Dashboard/dashboard.less");
 
             bundles.Add(new ScriptBundle("~/scripts/common").Include(
                 "~/Scripts/jQuery/jQuery.js",
-                "~/Scripts/Bootstrap/bootstrap.js",
-                "~/Scripts/Fanex.Grid/Fanex.Grid.js",
-                "~/Scripts/Fanex.Grid/Fanex.Pagination.js"));
+                "~/Scripts/Bootstrap/bootstrap.js"));
+        }
+
+        /// <summary>
+        /// Bundles JavaScript and LESS files for Customer area.
+        /// </summary>
+        /// <param name="bundles">The bundle collection.</param>
+        public static void RegisterCustomerBundles(BundleCollection bundles)
+        {
+            bundles.AddAndInclude(
+                "~/styles/dashboard",
+                "~/Areas/Customer/Resources/Dashboard/dashboard.less");
         }
     }
 }

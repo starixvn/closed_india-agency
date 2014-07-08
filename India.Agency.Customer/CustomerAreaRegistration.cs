@@ -1,26 +1,26 @@
 ﻿// --------------------------------------------------------------------------
-// <copyright file="MainAreaRegistration.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="CustomerAreaRegistration.cs" company="Nexcel Solutions Vietnam">
 // Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------
 // <history>
-//   <change who="Jason.Ly" date="2014.7.7">Created.</change>
+//   <change who="Jason.Ly" date="2014.7.8">Created.</change>
 // </history>
 
-namespace India.Agency.Main
+namespace India.Agency.Customer
 {
     using System.Web.Mvc;
 
     /// <summary>
-    /// Register the Main area.
+    /// Register the Customer area.
     /// </summary>
-    public class MainAreaRegistration : AreaRegistration
+    public class CustomerAreaRegistration : AreaRegistration
     {
         public override string AreaName
         {
             get
             {
-                return "Main";
+                return "Customer";
             }
         }
 
@@ -31,8 +31,8 @@ namespace India.Agency.Main
         public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "Main_default",
-                "Main/{controller}/{action}/{id}",
+                "Customer_default",
+                "Customer/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional });
         }
     }

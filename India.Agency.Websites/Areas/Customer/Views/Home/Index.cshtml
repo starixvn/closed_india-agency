@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/styles/common")
+    @Styles.Render("~/styles/layout")
     @Scripts.Render("~/scripts/headjs")
 </head>
 <body>
@@ -96,10 +96,10 @@
                 </ul>
             </div>
             <div class="rightPanel expandRight">
-                <iframe id="ifrMainContent" name="MainContent" frameborder="0" src="@Url.Content("~/Main/Home/Dashboard")"></iframe>
+                <iframe id="ifrMainContent" name="MainContent" frameborder="0" src="@Url.Content("~/Customer/Dashboard")"></iframe>
             </div>
         </section>
     </div>
-    @Scripts.Render("~/scripts/common")
+    @Scripts.Render("~/scripts/layout")
 </body>
 </html>
