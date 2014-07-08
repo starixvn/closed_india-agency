@@ -36,7 +36,6 @@ namespace India.Agency.Websites
                 "~/Content/Bootstrap/CSS/bootstrap.css",
                 "~/Content/Fanex.Grid/Fanex.Grid.css",
                 "~/Content/Fanex.Grid/Fanex.Pagination.css",
-                "~/Content/msdropdown/dd.css",
                 "~/Content/Themes/custom.less",
                 "~/Content/Themes/style.less");
 
@@ -48,8 +47,7 @@ namespace India.Agency.Websites
                 "~/Scripts/jQuery/jQuery.js",
                 "~/Scripts/Bootstrap/bootstrap.js",
                 "~/Scripts/Fanex.Grid/Fanex.Grid.js",
-                "~/Scripts/Fanex.Grid/Fanex.Pagination.js",
-                "~/Scripts/msdropdown/jquery.dd.js"));
+                "~/Scripts/Fanex.Grid/Fanex.Pagination.js"));
         }
     }
 }
