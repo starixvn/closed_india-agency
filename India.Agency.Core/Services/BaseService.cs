@@ -21,7 +21,7 @@ namespace India.Agency.Core.Services
     /// </summary>
     public class BaseService
     {
-        private const string BalanceUpCacheKey = "";
+        private const string BalanceUpCacheKey = "India.Agency.BalanceUpDay";
         private static DynamicRepository _repository = new DynamicRepository();
 
         public static DynamicRepository Repository
@@ -45,7 +45,7 @@ namespace India.Agency.Core.Services
                 var criteria = new GetBalanceUpDayCriteria();
 
                 balanceUp = Repository.Get<BalanceUp>(criteria);
-                CacheManager.Set<BalanceUp>(BalanceUpCacheKey, balanceUp, new TimeSpan(0, 0, 30));
+                CacheManager.Set<BalanceUp>(BalanceUpCacheKey, balanceUp, new TimeSpan(0, 0, 5, 0));
             }
 
             return balanceUp;

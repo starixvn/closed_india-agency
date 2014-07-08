@@ -1,0 +1,47 @@
+﻿// --------------------------------------------------------------------------
+// <copyright file="SessionManager.cs" company="Nexcel Solutions Vietnam">
+// Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------
+// <history>
+//   <change who="Jason.Ly" date="2014.7.8">Created.</change>
+// </history>
+
+namespace India.Agency.Core.Web
+{
+    using System.Web;
+
+    /// <summary>
+    /// <see cref="http://msdn.microsoft.com/en-us/library/ff650316.aspx"/>
+    /// </summary>
+    public static class SessionManager
+    {
+        private const string AppSessionKey = "LicenseeAgent.Web.CurrentSession";
+
+        public static ICurrentSession CurrentSession
+        {
+            get
+            {
+                return (ICurrentSession)HttpContext.Current.Session[AppSessionKey];
+            }
+
+            set
+            {
+                HttpContext.Current.Session[AppSessionKey] = value;
+            }
+        }
+
+        /// <summary>
+        /// Clears all session data.
+        /// </summary>
+        public static void ClearAll()
+        {
+            if (HttpContext.Current != null && HttpContext.Current.Session != null)
+            {
+                HttpContext.Current.Session.Clear();
+                HttpContext.Current.Session.Abandon();
+                HttpContext.Current.Response.Cookies.Clear();
+            }
+        }
+    }
+}

@@ -59,5 +59,32 @@ namespace India.Agency.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password has expired on {0}. You must change your password now..
+        /// </summary>
+        public static string PasswordExpired {
+            get {
+                return ResourceManager.GetString("PasswordExpired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is your first login. You must change your password before continuing..
+        /// </summary>
+        public static string PasswordFirstUse {
+            get {
+                return ResourceManager.GetString("PasswordFirstUse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password will expire on {0}. Do you want to change it now?.
+        /// </summary>
+        public static string PasswordWillExpired {
+            get {
+                return ResourceManager.GetString("PasswordWillExpired", resourceCulture);
+            }
+        }
     }
 }

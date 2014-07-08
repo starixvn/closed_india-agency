@@ -14,5 +14,6 @@ namespace India.Agency.Core.Configurations
     /// </summary>
     public static class Constants
     {
+        public const string AppCookieLanguage = "IndiaAgencyLanguage";
     }
 }

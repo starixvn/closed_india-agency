@@ -10,11 +10,12 @@
 namespace India.Agency.Main.Controllers
 {
     using System.Web.Mvc;
+    using India.Agency.Core.Web;
 
     /// <summary>
     /// Home controller.
     /// </summary>
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public HomeController()
         {

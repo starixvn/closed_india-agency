@@ -70,6 +70,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\India.Agency.Core\India.Agency.Core.csproj">
+      <Project>{E6B6690C-CEB3-476B-A61D-974782D0FAB9}</Project>
+      <Name>India.Agency.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\India.Agency.Resources\India.Agency.Resources.csproj">
+      <Project>{26523D25-A38A-4BD0-A4D2-119C8D311C41}</Project>
+      <Name>India.Agency.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
