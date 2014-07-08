@@ -253,11 +253,9 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Main\Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -265,6 +263,9 @@
   <ItemGroup>
     <Content Include="Areas\Main\Views\Web.config" />
     <Content Include="Areas\Main\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Main\Views\Home\Dashboard.cshtml" />
+    <Content Include="Areas\Main\Views\Home\_LeftPanel.cshtml" />
+    <Content Include="Areas\Main\Resources\Home\dashboard.less" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -297,6 +298,8 @@
     <Content Include="Content\Themes\mixins.less" />
     <Content Include="Content\Themes\style.less" />
     <Content Include="Content\Themes\variables.less" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\India.Agency.Core\India.Agency.Core.csproj">

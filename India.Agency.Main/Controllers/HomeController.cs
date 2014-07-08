@@ -29,5 +29,14 @@ namespace India.Agency.Main.Controllers
         {
             return View("~/Areas/Main/Views/Home/Index.cshtml");
         }
+
+        /// <summary>
+        /// Gets dashboard page.
+        /// </summary>
+        /// <returns>Return dashboard View.</returns>
+        public ActionResult Dashboard()
+        {
+            return View("~/Areas/Main/Views/Home/Dashboard.cshtml");
+        }
     }
 }

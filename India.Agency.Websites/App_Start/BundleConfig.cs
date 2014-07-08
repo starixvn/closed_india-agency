@@ -39,6 +39,10 @@ namespace India.Agency.Websites
                 "~/Content/Themes/custom.less",
                 "~/Content/Themes/style.less");
 
+            bundles.AddAndInclude(
+                "~/styles/dashboard",
+                "~/Areas/Main/Resources/Home/dashboard.less");
+
             bundles.Add(new ScriptBundle("~/scripts/headjs").Include(
                 "~/Scripts/HeadJs/head.min.js",
                 "~/Scripts/RespondJs/respond.min.js"));

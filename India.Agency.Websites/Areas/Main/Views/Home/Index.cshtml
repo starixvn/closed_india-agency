@@ -1,138 +1,105 @@
-﻿@{
-    ViewBag.Title = "India Agency";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<div class="row contentContainer dashboard">
-    <div class="col-sm-12">
-        <div class="col-sm-6 col">
-            <div class="row block balanceInfo">
-                <div class="col-xs-12 title">
-                    Balance Info</div>
-                <div class="col-xs-12 row-block topBorder">
-                    <span class="pull-left">Agent</span> <span class="pull-right">agent01</span>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/styles/common")
+    @Scripts.Render("~/scripts/headjs")
+</head>
+<body>
+    <div class="container-fluid page">
+        <header class="header">
+            <div class="topHeader">
+                <a class="logo" href="#"></a>
+                <div class="banner">
+                    <ul class="list-unstyled list-inline info">
+                        <li class="username">
+                            <span class="icon-username"></span>
+                            <ul class="userInfo list-unstyled">
+                                <li class="avatar">Welcome <br /> <span class="username">Alice</span></li>
+                                <li><a href="#"><span class="icon-profile"></span> Profile Setting</a></li>
+                                <li><a href="#"><span class="icon-changePass"></span> Change Password</a></li>
+                                <li><a href="#"><span class="icon-signOut"></span> Sign Out</a></li>
+                            </ul>
+                        </li>
+                        <li class="hide">
+                            <div class="numberMessage">
+                                <span class="icon-message"></span>
+                                <span class="number">12</span>
+                            </div>
+                        </li>
+                        <li class="hide"><span class="icon-help"></span></li>
+                        <li class="flagList">
+                            <div class="flag en active">English <span class="icon-arrow-down"></span>
+                                <ul class="list-unstyled list">
+                                    <li class="flag in">हिन्दी</li>
+                                    <li class="flag en">English</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <marquee behavior="scroll" direction="left" class="message hide">
+                        <span class="icon-notice"></span> @* Message content *@
+                    </marquee>
                 </div>
-                <div class="col-xs-12 row-block">
-                    <span class="pull-left">Currency</span> <span class="pull-right">UDI</span>
+            </div>
+            <div class="bottomHeader">
+                <div class="search">
+                    <input type="text" class="txtSearch" placeholder="Username" />
+                    <span class="icon-collapse"></span>
                 </div>
-                <div class="col-xs-12 row-block">
-                    <span class="pull-left">Yesterday Balance</span> <span class="pull-right txtSpecial">
-                        -179,000.00</span>
+                <div class="rightHeader">
+                    <ul class="list-unstyled list-inline topMenu">
+                        <li class="current"><a href="#">Home</a></li>
+                        <li>Report
+                            <ul class="list-unstyled subMenu">
+                                <li><a href="#">Report 01</a></li>
+                                <li><a href="#">Report 01</a></li>
+                                <li><a href="#">Report 01</a></li>
+                                <li><a href="#">Report 01</a></li>
+                            </ul>
+                        </li>
+                        <li>Customer management
+                            <ul class="list-unstyled subMenu">
+                                <li><a href="#">Customer management 01</a></li>
+                                <li><a href="#">Customer management 01</a></li>
+                                <li><a href="#">Customer management 01</a></li>
+                                <li><a href="#">Customer management 01</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Total Bet & Forecast</a></li>
+                    </ul>
+                    <div class="dateTime">3:28:19 AM Sept 3, 2013 GMT-4</div>
                 </div>
-                <ul class="col-xs-12 list-unstyled list-inline total">
-                    <li>
-                        <div>
-                            You have earned</div>
-                        <div class="money">
-                            <span class="number">21,451</span>USD
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            TODAY</div>
-                        <div class="money">
-                            <span class="number">451</span>USD
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            THIS MONTH</div>
-                        <div class="money">
-                            <span class="number">8,514</span>USD
-                        </div>
-                    </li>
+            </div>
+        </header>
+        <section class="content">
+            <div class="leftPanel">
+                <div class="container">
+                    <div class="row title">Customer Info</div>
+                    <div class="row"></div>
+                </div>
+                <div class="container">
+                    <div class="row title">Customer Balance</div>
+                    <div class="row"></div>
+                </div>
+                <ul class="container list-unstyled featureList">
+                    <li><a href="#"><span class="icon-newCustomer"></span>New Customer</a></li>
+                    <li><a href="#"><span class="icon-infoCustomer"></span>Customer Info</a></li>
+                    <li><a href="#"><span class="icon-password"></span>Reset Password</a></li>
+                    <li><a href="#"><span class="icon-cricket"></span>Cricket</a></li>
+                    <li><a href="#"><span class="icon-sportbook"></span>Sportbook</a></li>
+                    <li><a href="#"><span class="icon-positionTaking"></span>View Position Taking</a></li>
+                    <li><a href="#"><span class="icon-commission"></span>View Commission</a></li>
                 </ul>
             </div>
-            <div class="row block hierarchy">
-                <div class="col-xs-12 title">
-                    Agent hierarchy</div>
-                <div class="col-xs-12 row-block noBorder lastRow">
-                    <div class="col-xs-7">
-                        <img src="~/content/themes/images/hierarchy.png" class="img-responsive" title="hierarchy" />
-                    </div>
-                    <ul class="col-xs-5 list-unstyled levelList">
-                        <li><a href="#">Viren Shareholder</a></li>
-                        <li><a href="#">Viren Agent</a></li>
-                        <li><a href="#">Agent 1</a></li>
-                        <li><a href="#">Agent 01</a></li>
-                    </ul>
-                </div>
+            <div class="rightPanel">
+                <iframe id="ifrMainContent" name="MainContent" frameborder="0" src="@Url.Content("~/Main/Home/Dashboard")"></iframe>
             </div>
-        </div>
-        <div class="col-sm-6 col">
-            <div class="row block statistic">
-                <div class="col-xs-12 title">
-                    Statistic</div>
-                <div class="col-xs-12 row-block topBorder">
-                    <span class="pull-left">Agent outstanding</span> <span class="pull-right txtGreen">1,000.00</span>
-                </div>
-                <div class="col-xs-12 row-block">
-                    <span class="pull-left">Total outstanding</span> <span class="pull-right  txtGreen">
-                        10,000.00</span>
-                </div>
-                <div class="col-xs-12 row-block lastRow">
-                    <span class="pull-left">New member of the month</span> <span class="pull-right">32</span>
-                </div>
-            </div>
-            <div class="row block chart">
-                <div class="col-xs-12">
-                    <div class="title">
-                        Winloss Chart</div>
-                    <ul class="list-unstyled list-inline listTab">
-                        <li><a href="#">Weekly</a></li>
-                        <li class="active"><a href="#">Monthly</a></li>
-                        <li><a href="#">Yearly</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 row-block noBorder">
-                    <img src="~/content/themes/images/chart.png" class="img-responsive" title="Chart" />
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
-    <div class="col-sm-12">
-        <div class="row block announcement">
-            <div class="col-sm-12 title">
-                Announcements</div>
-            <div class="col-sm-12 row-block topBorder">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-            <div class="col-sm-12 row-block">
-                [Cricket] Due to technical error, all bets placed on [Bingo Event #00366 - 3/9]
-                are considered REFUNDED. Sorry for the inconveniences caused!
-            </div>
-        </div>
-    </div>
-</div>
+    @Scripts.Render("~/scripts/common")
+</body>
+</html>
