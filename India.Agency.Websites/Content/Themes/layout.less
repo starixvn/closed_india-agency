@@ -31,12 +31,6 @@ body {
     right: 0;
 }
 
-.icon {
-    background: url(images/sprites.png) no-repeat;
-    display: inline-block;
-    cursor: pointer;
-}
-
 .hoverLayer{
     position: absolute;
     background-color: #fff;
@@ -137,28 +131,6 @@ body {
                                 }
                             }
 
-                            li {
-                                .icon-profile, .icon-changePass, .icon-signOut {
-                                    .icon;
-                                    height: 15px;
-                                    width: 15px;
-                                    margin-right: 2px;
-                                }
-
-                                .icon-profile {
-                                    background-position: -9px -26px;
-                                }
-
-                                .icon-changePass {
-                                    background-position: -32px -26px;
-                                }
-
-                                .icon-signOut {
-                                    background-position: -58px -27px;
-                                    margin-top: 2px;
-                                }
-                            }
-
                             &:after {
                                 border-color: #fff rgba(0, 0, 0, 0);
                                 border-style: solid;
@@ -191,7 +163,7 @@ body {
                                 background-position: 6px 6px;
                             }
 
-                            &.in {
+                            &.in, &.gu {
                                 background-position: 6px -37px;
                             }
 
@@ -216,42 +188,7 @@ body {
                                 padding: 5px 20px 5px 33px;
                             }
                         }
-
-                        .icon-arrow-down {
-                            background: url(images/sprites.png) -86px -4px no-repeat;
-                            height: 10px;
-                            width: 8px;
-                            margin-left: 5px;
-                            display: inline-block;
-                        }
                     }
-                }
-
-                .icon-username {
-                    .icon;
-                    background-position: -7px -7px;
-                    width: 16px;
-                    height: 12px;
-                    margin-top: 9px;
-                    display: block;
-                }
-
-                .icon-message {
-                    .icon;
-                    background-position: -29px -6px;
-                    height: 16px;
-                    margin: 7px 11px 0 0;
-                    width: 23px;
-                    display: block;
-                }
-
-                .icon-help {
-                    .icon;
-                    background-position: -56px -6px;
-                    width: 16px;
-                    height: 14px;
-                    margin-top: 8px;
-                    display: block;
                 }
 
                 .selLanguage {
@@ -262,15 +199,6 @@ body {
                     option {
                         padding-left: 25px;
                     }
-                }
-
-
-                .icon-english {
-                    .icon;
-                    background: url(images/language.png) no-repeat;
-                    height: 17px;
-                    width: 22px;
-                    float: left;
                 }
 
                 .numberMessage {
@@ -292,15 +220,6 @@ body {
             marquee.message {
                 color: #fff;
                 margin-top: 7px;
-
-                .icon-notice {
-                    .icon;
-                    background-position: -112px -4px;
-                    height: 16px;
-                    width: 15px;
-                    margin-right: 5px;
-                    float: left;
-                }
             }
         }
     }
@@ -331,14 +250,6 @@ body {
                 color: #dee6ef;
                 padding: 5px 5px 5px 34px;
                 float: left;
-            }
-
-            .icon-collapse {
-                .icon;
-                background-position: -134px -19px;
-                float: left;
-                height: 29px;
-                width: 30px;
             }
         }
 
@@ -384,12 +295,12 @@ body {
 
                     .subMenu {
                         .hoverLayer;
-                        background-color: #adc2de;
+                        background-color: #37608c;
                         border: none;
                         top: 30px;
                         left: -3px;
                         z-index: 500;
-                        padding-top: 5px;
+                        padding: 5px 0;
                         display: none;
                         .box-shadow(none);
 
@@ -397,10 +308,10 @@ body {
                             border: none;
 
                             &:hover {
-                                background-color: #d6e4f5;
+                                background: none;
 
-                                a {
-                                    color: @link-color;
+                                a:hover, a {
+                                    color: #dfc04b;
                                 }
                             }
 
@@ -414,7 +325,7 @@ body {
                         }
 
                         &:after {
-                            border-color: #adc2de rgba(0, 0, 0, 0);
+                            border-color: #37608c rgba(0, 0, 0, 0);
                             border-style: solid;
                             border-width: 0 6px 6px;
                             content: "";
@@ -477,69 +388,6 @@ body {
                         vertical-align: middle;
                     }
                 }
-
-                .icon-newCustomer {
-                    .icon;
-                    background-position: -9px -47px;
-                    width: 17px;
-                    height: 18px;
-                    margin: 2px 5px 0 0;
-                    float: left;
-                }
-
-                .icon-infoCustomer {
-                    .icon;
-                    background-position: -57px -47px;
-                    width: 17px;
-                    height: 18px;
-                    margin: 2px 5px 0 0;
-                    float: left;
-                }
-
-                .icon-password {
-                    .icon;
-                    background-position: -32px -47px;
-                    width: 17px;
-                    height: 18px;
-                    margin: 2px 5px 0 0;
-                    float: left;
-                }
-
-                .icon-cricket {
-                    .icon;
-                    background-position: -86px -47px;
-                    width: 17px;
-                    height: 18px;
-                    margin: 2px 5px 0 0;
-                    float: left;
-                }
-
-                .icon-sportbook {
-                    .icon;
-                    background-position: -112px -47px;
-                    width: 17px;
-                    height: 18px;
-                    margin: 2px 5px 0 0;
-                    float: left;
-                }
-
-                .icon-positionTaking {
-                    .icon;
-                    background-position: -142px -47px;
-                    width: 17px;
-                    height: 18px;
-                    margin: 2px 5px 0 0;
-                    float: left;
-                }
-
-                .icon-commission {
-                    .icon;
-                    background-position: -172px -47px;
-                    width: 17px;
-                    height: 18px;
-                    margin: 2px 5px 0 0;
-                    float: left;
-                }
             }
         }
 
@@ -558,11 +406,11 @@ body {
         bottom: 0;
         background-color: #f3f5f8;
 
-        &.expandRight {
+        &.expand {
             left: 0;
         }
 
-        &.collapseRight {
+        &.collapse {
             left: @left-panel-width;
         }
     }
@@ -580,13 +428,6 @@ body {
         content: "";
         background: url(images/icon-arrow-left.png) 0 5px no-repeat;
         padding: 0 7px;
-    }
-
-    .icon-home {
-        .icon;
-        background-position: -143px -4px;
-        width: 14px;
-        height: 15px;
     }
 }
 

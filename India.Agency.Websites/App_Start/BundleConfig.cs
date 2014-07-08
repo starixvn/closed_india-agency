@@ -36,7 +36,8 @@ namespace India.Agency.Websites
             bundles.AddAndInclude(
                 "~/styles/layout",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
-                "~/Content/Themes/style.less");
+                "~/Content/Themes/icon.less",
+                "~/Content/Themes/layout.less");
 
             bundles.Add(new ScriptBundle("~/scripts/headjs").Include(
                 "~/Scripts/HeadJs/head.min.js",
@@ -56,7 +57,8 @@ namespace India.Agency.Websites
             bundles.AddAndInclude(
                 "~/styles/common",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
-                "~/Content/Themes/custom.less");
+                "~/Content/Themes/icon.less",
+                "~/Content/Themes/content.less");
 
             bundles.AddAndInclude(
                 "~/styles/dashboard",
