@@ -6,7 +6,6 @@ body {
     font-size: @font-size;
     color: @text-color;
     line-height: @line-height;
-    min-width: 810px;
 }
 
 .page {
@@ -276,7 +275,7 @@ body {
 
                     .number {
                         background-color: #ea5e51;
-                        border-radius: 18px;
+                        .border-radius(18px);
                         padding: 0px 5px;
                         color: #fff;
                         font-size: 9px;
@@ -319,14 +318,15 @@ body {
                 border: none;
                 color: #dee6ef;
                 padding: 5px 5px 5px 34px;
+                float: left;
             }
 
             .icon-collapse {
                 .icon;
-                background-position: -144px -27px;
-                height: 10px;
-                width: 12px;
-                margin-left: 7px;
+                background-position: -134px -19px;
+                float: left;
+                height: 29px;
+                width: 30px;
             }
         }
 
@@ -428,7 +428,7 @@ body {
         .container {
             background: rgba(255, 255, 255, 0.1);
             width: 223px;
-            border-radius: 3px;
+            .border-radius(3px);
             margin-bottom: 3px;
             padding: 7px;
             min-height: 100px;
@@ -518,7 +518,7 @@ body {
             display: inline-block;
             margin: 0;
             padding: 1px 8px;
-            border-radius: 5px;
+            .border-radius(5px);
         }
     }
 
@@ -595,7 +595,7 @@ body {
 
                 .listTab {
                     float: right;
-                    border-radius: 3px;
+                    .border-radius(3px);
                     background-color: #e3e3e3;
 
                     li {
@@ -635,6 +635,7 @@ body {
             .row-block {
                 padding: 5px 10px;
                 border-bottom: 1px solid @border-color;
+                clear: both;
 
                 &.topBorder {
                     border-top: 1px solid @border-color;
@@ -678,5 +679,16 @@ body {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 650px) { 
+    .container-fluid.page {
+        overflow: auto;
+
+        .header, .content {
+            min-width: 850px;
+        }
+        
     }
 }
