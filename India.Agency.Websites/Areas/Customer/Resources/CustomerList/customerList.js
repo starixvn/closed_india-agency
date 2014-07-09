@@ -1,5 +1,5 @@
 ﻿/* File Created: July 9, 2014 */
-/* global Namespace, India, core */
+/* global Namespace, India, core, language */
 'use strict';
 
 Namespace.Register("India.Agency.CustomerList");
@@ -42,17 +42,17 @@ India.Agency.CustomerList = function () {
     var renderCustomerList = function () {
         var gridOptions = {
             columns: [{ HeaderText: '#', Width: 70, Name: 'ColNo', HeaderAlign: 'center', CellAlign: 'center' },
-                      { HeaderText: 'Action', Width: 100, Name: 'ColAction', HeaderAlign: 'center', CellAlign: 'center' },
-                      { HeaderText: 'Username', Width: 300, Name: 'ColUsername', HeaderAlign: 'center', CellAlign: 'left' },
-                      { HeaderText: 'Status', Width: 100, Name: 'ColStatus', HeaderAlign: 'center', CellAlign: 'right' },
-                      { HeaderText: 'Downlines', Width: 100, Name: 'ColDownlines', HeaderAlign: 'center', CellAlign: 'center' },
-                      { HeaderText: 'Total of Members', Width: 100, Name: 'ColTotalOfMembers', HeaderAlign: 'center', CellAlign: 'right',
+                      { HeaderText: language.GetString('Action'), Width: 100, Name: 'ColAction', HeaderAlign: 'center', CellAlign: 'center' },
+                      { HeaderText: language.GetString('Username'), Width: 300, Name: 'ColUsername', HeaderAlign: 'center', CellAlign: 'left' },
+                      { HeaderText: language.GetString('Status'), Width: 100, Name: 'ColStatus', HeaderAlign: 'center', CellAlign: 'right' },
+                      { HeaderText: language.GetString('Downlines'), Width: 100, Name: 'ColDownlines', HeaderAlign: 'center', CellAlign: 'center' },
+                      { HeaderText: language.GetString('TotalOfMembers'), Width: 100, Name: 'ColTotalOfMembers', HeaderAlign: 'center', CellAlign: 'right',
                           FormatNumber: core.Formats.IntegerFormat
                       },
-                      { HeaderText: 'Given Credit', Width: 100, Name: 'ColGivenCredit', HeaderAlign: 'center', CellAlign: 'right',
+                      { HeaderText: language.GetString('GivenCredit'), Width: 100, Name: 'ColGivenCredit', HeaderAlign: 'center', CellAlign: 'right',
                           FormatNumber: core.Formats.DecimalFormat
                       },
-                      { HeaderText: 'Used Credit', Width: 100, Name: 'ColUsedCredit', HeaderAlign: 'center', CellAlign: 'right',
+                      { HeaderText: language.GetString('UsedCredit'), Width: 100, Name: 'ColUsedCredit', HeaderAlign: 'center', CellAlign: 'right',
                           FormatNumber: core.Formats.DecimalFormat
                       }],
             gridExpandHeight: 180,

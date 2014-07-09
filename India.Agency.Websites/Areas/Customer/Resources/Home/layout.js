@@ -97,6 +97,9 @@ India.Agency.Layout = function () {
 
         if (domElements.divRightPanel.offset().left !== mainContentLeft) {
             left = mainContentLeft;
+            domElements.spanCollapse.removeClass('active');
+        } else {
+            domElements.spanCollapse.addClass('active');
         }
 
         domElements.divRightPanel.animate({

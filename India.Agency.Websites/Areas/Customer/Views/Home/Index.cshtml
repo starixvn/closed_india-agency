@@ -26,7 +26,7 @@
             <div class="bottomHeader">
                 <div class="search">
                     <input type="text" id="txtSearch" class="txtSearch" placeholder="Username" />
-                    <span id="spanCollapse" class="icon-collapse"></span>
+                    <span id="spanCollapse" class="icon-collapse active"></span>
                 </div>
                 <div class="rightHeader">
                     @Html.Partial("~/Areas/Customer/Views/Home/_TopMenus.cshtml")
@@ -45,5 +45,6 @@
     </div>
     @Html.Partial("_AppSettings")
     @Scripts.Render("~/scripts/layout")
+    @Scripts.Render("~/scripts/languages")
 </body>
 </html>

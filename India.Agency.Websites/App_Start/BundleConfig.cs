@@ -88,6 +88,13 @@ namespace India.Agency.Websites
                 "~/Scripts/Namespace/namespace.js",
                 "~/Scripts/extensions.js",
                 "~/Scripts/core.js"));
+
+            bundles.Add(new ScriptBundle("~/scripts/languages").Include(
+                "~/Scripts/ResourceJs/language.js",
+                "~/Scripts/ResourceJs/Labels.js",
+                "~/Scripts/ResourceJs/Labels.en-US.js",
+                "~/Scripts/ResourceJs/Labels.gu-IN.js",
+                "~/Scripts/ResourceJs/Labels.hi-IN.js"));
         }
 
         /// <summary>

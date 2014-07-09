@@ -198,6 +198,10 @@ India.Agency.Core = function () {
             moment.lang($this.AppSettings.SelectedLanguage.toLowerCase());
         }
 
+        if (window.language) {
+            window.language.Initialize($this.AppSettings.SelectedLanguage);
+        }
+
         if ($.fn.fanexGrid) {
             $.fn.fanexGrid.defaults.scrollWidth = 24;
             $.fn.fanexGrid.defaults.language = $this.AppSettings.SelectedLanguage;

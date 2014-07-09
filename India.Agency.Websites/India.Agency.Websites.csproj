@@ -255,6 +255,21 @@
     <Content Include="Scripts\Namespace\namespace.js" />
     <Content Include="Scripts\NiceScroll\jquery.nicescroll.min.js" />
     <Content Include="Scripts\NumeralJs\numeral.js" />
+    <Content Include="Scripts\ResourceJs\language.js" />
+    <Content Include="Scripts\ResourceJs\Labels.en-US.js">
+      <DependentUpon>Labels.tt</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ResourceJs\Labels.gu-IN.js">
+      <DependentUpon>Labels.tt</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ResourceJs\Labels.hi-IN.js">
+      <DependentUpon>Labels.tt</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ResourceJs\Labels.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Labels.tt</DependentUpon>
+    </Content>
     <Content Include="Scripts\RespondJs\respond.min.js" />
     <Content Include="Scripts\Select2\select2.js" />
     <Content Include="Scripts\Select2\select2.min.js" />
@@ -320,6 +335,10 @@
     <Content Include="Content\Themes\icon.less" />
     <None Include="Content\Themes\common.less" />
     <Content Include="Views\Shared\_AppSettings.cshtml" />
+    <None Include="Scripts\ResourceJs\Labels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Labels.js</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\India.Agency.Account\India.Agency.Account.csproj">
@@ -338,6 +357,9 @@
       <Project>{26523D25-A38A-4BD0-A4D2-119C8D311C41}</Project>
       <Name>India.Agency.Resources</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
