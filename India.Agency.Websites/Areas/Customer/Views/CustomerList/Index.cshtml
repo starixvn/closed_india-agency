@@ -1,21 +1,23 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div>
-    <div>
-        <div><label for="txtUsername">@Labels.Username</label></div>
-        <div><input type="text" id="txtUsername" /></div>
-        <div><label for="ddlStatus">@Labels.Status</label></div>
-        <div>
-            <select id="ddlStatus" class="select2">
-                <option>@Labels.All</option>
-                <option>@Labels.Open</option>
-                <option>@Labels.Closed</option>
-            </select>
-        </div>
-        <div><input type="button" id="btnSearch" value="@Labels.Search"/></div>
-    </div>
-</div>
+<form class="row form-inline filterForm" role="form">
+  <div class="form-group">
+    <label for="txtUsername">@Labels.Username</label>
+    <input type="text" id="txtUsername" />
+  </div>
+  <div class="form-group">
+    <label for="ddlStatus">@Labels.Status</label>
+    <select id="ddlStatus" class="select2">
+        <option>@Labels.All</option>
+        <option>@Labels.Open</option>
+        <option>@Labels.Closed</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <input type="button" id="btnSearch" class="button" value="@Labels.Search"/>
+  </div>
+</form>
 <div id="divBreadcrumb"></div>
 <div id="divCustomerListContainer" class="hide">
     <div id="divCustomerList" class="freegrid"></div>
