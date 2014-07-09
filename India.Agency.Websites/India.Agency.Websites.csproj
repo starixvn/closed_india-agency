@@ -223,6 +223,7 @@
     <Content Include="Content\Themes\Images\bg-header.jpg" />
     <Content Include="Content\Themes\Images\bg-leftPanel.jpg" />
     <Content Include="Content\Themes\Images\chart.png" />
+    <Content Include="Content\Themes\Images\favicon.ico" />
     <Content Include="Content\Themes\Images\Flags\blank.gif" />
     <Content Include="Content\Themes\Images\Flags\flags.png" />
     <Content Include="Content\Themes\Images\hierarchy.png" />
