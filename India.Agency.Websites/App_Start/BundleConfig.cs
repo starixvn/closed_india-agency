@@ -63,6 +63,7 @@ namespace India.Agency.Websites
             bundles.AddAndInclude(
                 "~/styles/common",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
+                "~/Content/Select2/select2.css",
                 "~/Content/Themes/icon.less",
                 "~/Content/Fanex.Grid/Fanex.Grid.css",
                 "~/Content/Fanex.Grid/Fanex.Pagination.css",
@@ -76,6 +77,7 @@ namespace India.Agency.Websites
             bundles.Add(new ScriptBundle("~/scripts/common").Include(
                 "~/Scripts/jQuery/jQuery.js",
                 "~/Scripts/Bootstrap/bootstrap.js",
+                "~/Scripts/Select2/select2.js",
                 "~/Scripts/MomentJs/moment-langues.js",
                 "~/Scripts/NumeralJs/numeral.js",
                 "~/Scripts/NiceScroll/jquery.nicescroll.min.js",

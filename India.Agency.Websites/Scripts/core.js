@@ -188,6 +188,11 @@ India.Agency.Core = function () {
             });
         }
 
+        // Setup Select2 for dropdown list.
+        if ($.fn.select2) {
+            $('select.select2').select2();
+        }
+
         // Set language for MomentJs and Fanex.Grid.
         if (typeof moment !== 'undefined') {
             moment.lang($this.AppSettings.SelectedLanguage.toLowerCase());

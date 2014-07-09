@@ -213,6 +213,11 @@
     <Content Include="Content\Fanex.Grid\Images\sorting_bg.gif" />
     <Content Include="Content\Fanex.Grid\Images\sorting_desc.gif" />
     <Content Include="Content\Fanex.Grid\Images\white-top-bottom.gif" />
+    <Content Include="Content\Select2\select2-bootstrap.css" />
+    <Content Include="Content\Select2\select2-spinner.gif" />
+    <Content Include="Content\Select2\select2.css" />
+    <Content Include="Content\Select2\select2.png" />
+    <Content Include="Content\Select2\select2x2.png" />
     <Content Include="Content\Themes\Images\avatar.png" />
     <Content Include="Content\Themes\Images\bg-banner.jpg" />
     <Content Include="Content\Themes\Images\bg-header.jpg" />
@@ -251,6 +256,8 @@
     <Content Include="Scripts\NiceScroll\jquery.nicescroll.min.js" />
     <Content Include="Scripts\NumeralJs\numeral.js" />
     <Content Include="Scripts\RespondJs\respond.min.js" />
+    <Content Include="Scripts\Select2\select2.js" />
+    <Content Include="Scripts\Select2\select2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
