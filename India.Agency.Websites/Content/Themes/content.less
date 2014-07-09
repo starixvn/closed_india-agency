@@ -4,6 +4,7 @@
 /* Common */
 input, select, textarea {
     border: 1px solid @element-border;
+    padding: 5px;
 }
 
 input, select {
@@ -34,11 +35,12 @@ input, select {
     border: 1px solid @border-color;
     background-color: #fff;
     padding: 10px;
-    margin: 10px 0 0;
+    margin: 15px 0;
     .border-radius(2px);
 
     label {
         margin-right: 3px;
+        font-weight: normal;
     }
 
     .form-group {
@@ -57,6 +59,8 @@ input, select {
 
 /* Customize Select2 */
 .select2-container {
+    color: #a3b8c8;
+
     .select2-choice{
         border: 1px solid @element-border;
         background: none;
@@ -72,3 +76,27 @@ input, select {
 .select2-container, .select2-drop, .select2-search, .select2-search input {
     min-width: 80px;
 }
+
+/* Customize Grid */
+.freegrid {
+    color: @table-color;
+    border-color: @table-border;
+
+    .free-top-left table thead th, .col_header table thead th {
+        background: @header-table-bg;
+        color: @header-table-color;
+    }
+
+    .freegrid thead th, .grid-fixed-table thead th {
+        border-color: @table-border;
+    }
+
+    td, .grid-fixed-table td {
+        border-color: @table-border;
+    }
+
+    .grid-pager {
+        border-color: @table-border;
+    }
+}
+
