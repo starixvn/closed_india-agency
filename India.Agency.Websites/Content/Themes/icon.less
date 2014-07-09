@@ -11,14 +11,16 @@
     height: 15px;
     width: 15px;
     margin-right: 2px;
+    position: relative;
+    top: 1px;
 }
 
 .icon-profile {
-    background-position: -9px -26px;
+    background-position: -9px -27px;
 }
 
 .icon-changePass {
-    background-position: -32px -26px;
+    background-position: -32px -27px;
 }
 
 .icon-signOut {
@@ -79,6 +81,14 @@
     float: left;
     height: 29px;
     width: 30px;
+
+    &.active, &:hover {
+       background-color: #5b7794;
+   }
+
+   &.active:hover {
+       background-color: #718ca9;
+   }
 }
 
 .icon-newCustomer {
