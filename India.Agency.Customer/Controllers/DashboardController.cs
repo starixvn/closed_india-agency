@@ -27,7 +27,7 @@ namespace India.Agency.Customer.Controllers
         /// <returns>Return Dashboard View.</returns>
         public ActionResult Index()
         {
-            return View("~/Areas/Customer/Views/Dashboard/Index.cshtml");
+            return View();
         }
     }
 }

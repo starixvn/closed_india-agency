@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <div>
+        <div><label for="txtUsername">@Labels.Username</label></div>
+        <div><input type="text" id="txtUsername" /></div>
+        <div><label for="ddlStatus">@Labels.Status</label></div>
+        <div>
+            <select id="ddlStatus">
+                <option>@Labels.All</option>
+                <option>@Labels.Open</option>
+                <option>@Labels.Closed</option>
+            </select>
+        </div>
+        <div><input type="button" id="btnSearch" value="@Labels.Search"/></div>
+    </div>
+</div>
+<div id="divBreadcrumb"></div>
+<div id="divCustomerListContainer" class="hide">
+    <div id="divCustomerList" class="freegrid"></div>
+</div>
+@section Foot
+{
+    @Scripts.Render("~/scripts/customerList")
+}

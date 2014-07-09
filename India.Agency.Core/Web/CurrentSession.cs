@@ -131,5 +131,7 @@ namespace India.Agency.Core.Web
         public string Username { get; private set; }
 
         public int OnUserId { get; private set; }
+
+        public Uri CurrentUrl { get; set; }
     }
 }

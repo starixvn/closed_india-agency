@@ -10,6 +10,7 @@
 namespace India.Agency.Customer.Controllers
 {
     using System.Web.Mvc;
+    using India.Agency.Core.ViewModels;
     using India.Agency.Core.Web;
 
     /// <summary>
@@ -24,9 +25,14 @@ namespace India.Agency.Customer.Controllers
         /// <summary>
         /// Gets Index page.
         /// </summary>
+        /// <param name="language">Language identification.</param>
         /// <returns>Return Index View.</returns>
-        public ActionResult Index()
+        public ActionResult Index(string language = null)
         {
+            language = language ?? DropdownValues.DefaultLanguage;
+            this.Language = language;
+            ViewBag.CurrentUrl = null;
+
             return View("~/Areas/Customer/Views/Home/Index.cshtml");
         }
     }

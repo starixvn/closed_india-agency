@@ -46,7 +46,12 @@ namespace India.Agency.Websites
 
             bundles.Add(new ScriptBundle("~/scripts/layout").Include(
                 "~/Scripts/jQuery/jQuery.js",
-                "~/Scripts/Bootstrap/bootstrap.js"));
+                "~/Scripts/Bootstrap/bootstrap.js",
+                "~/Scripts/MomentJs/moment-langues.js",
+                "~/Scripts/Namespace/namespace.js",
+                "~/Scripts/extensions.js",
+                "~/Scripts/core.js",
+                "~/Areas/Customer/Resources/Home/layout.js"));
         }
 
         /// <summary>
@@ -59,6 +64,8 @@ namespace India.Agency.Websites
                 "~/styles/common",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
                 "~/Content/Themes/icon.less",
+                "~/Content/Fanex.Grid/Fanex.Grid.css",
+                "~/Content/Fanex.Grid/Fanex.Pagination.css",
                 "~/Content/Themes/common.less",
                 "~/Content/Themes/content.less");
 
@@ -68,7 +75,17 @@ namespace India.Agency.Websites
 
             bundles.Add(new ScriptBundle("~/scripts/common").Include(
                 "~/Scripts/jQuery/jQuery.js",
-                "~/Scripts/Bootstrap/bootstrap.js"));
+                "~/Scripts/Bootstrap/bootstrap.js",
+                "~/Scripts/MomentJs/moment-langues.js",
+                "~/Scripts/NumeralJs/numeral.js",
+                "~/Scripts/NiceScroll/jquery.nicescroll.min.js",
+                "~/Scripts/Mutate/mutate.events.js",
+                "~/Scripts/Mutate/mutate.min.js",
+                "~/Scripts/Fanex.Grid/Fanex.Grid.js",
+                "~/Scripts/Fanex.Grid/Fanex.Pagination.js",
+                "~/Scripts/Namespace/namespace.js",
+                "~/Scripts/extensions.js",
+                "~/Scripts/core.js"));
         }
 
         /// <summary>
@@ -80,6 +97,9 @@ namespace India.Agency.Websites
             bundles.AddAndInclude(
                 "~/styles/dashboard",
                 "~/Areas/Customer/Resources/Dashboard/dashboard.less");
+
+            bundles.Add(new ScriptBundle("~/scripts/customerList").Include(
+                "~/Areas/Customer/Resources/CustomerList/customerList.js"));
         }
     }
 }

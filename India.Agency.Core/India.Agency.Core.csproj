@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\AppSettings.cs" />
-    <Compile Include="Configurations\AppURLs.cs" />
+    <Compile Include="Configurations\AppUrls.cs" />
     <Compile Include="Configurations\Constants.cs" />
     <Compile Include="Criteria\GetBalanceUpDayCriteria.cs" />
     <Compile Include="Enumerations\AccountType.cs" />

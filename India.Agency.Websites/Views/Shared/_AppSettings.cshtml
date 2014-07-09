@@ -1,0 +1,10 @@
+﻿@using India.Agency.Core.Utilities
+<script type="text/javascript">
+    var appSettings = {
+        RootUrl: '@Url.Content("~")',
+        SelectedLanguage: '@LanguageManager.Language',
+        ServerTime: '@DateTime.Now.ToString()',
+        ServerDate: '@DateTime.Now.ToShortDateString()',
+        ServerUtcOffset: '@DateTime.Now.ToString("zzz")'
+    };
+</script>

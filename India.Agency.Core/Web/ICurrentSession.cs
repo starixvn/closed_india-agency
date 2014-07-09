@@ -9,6 +9,7 @@
 
 namespace India.Agency.Core.Web
 {
+    using System;
     using India.Agency.Core.Enumerations;
     using India.Agency.Core.Models;
 
@@ -29,5 +30,7 @@ namespace India.Agency.Core.Web
         string Language { get; set; }
 
         int OnUserId { get; }
+
+        Uri CurrentUrl { get; set; }
     }
 }

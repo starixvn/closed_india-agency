@@ -1,0 +1,13 @@
+﻿<ul id="ulTopMenus" class="list-unstyled list-inline topMenu">
+    <li>
+        <a href="@Url.Action("Index", "Dashboard", new { area = "Customer" })" target="MainContent">@Labels.Home</a>
+    </li>
+    <li><a href="#">@Labels.Reports</a></li>
+    <li>
+        <a href="#">@Labels.CustomerInformation</a>
+        <ul class="list-unstyled subMenu">
+            <li><a href="@Url.Action("Index", "NewCustomer", new { area = "Customer" })" target="MainContent">@Labels.AddNewAgent</a></li>
+            <li><a href="@Url.Action("Index", "CustomerList", new { area = "Customer" })" target="MainContent">@Labels.ViewAgentList</a></li>
+        </ul>
+    </li>
+</ul>

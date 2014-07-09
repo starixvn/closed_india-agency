@@ -23,6 +23,12 @@ namespace India.Agency.Core.Web
     /// </summary>
     public class BaseController : Controller
     {
+        public BaseController()
+        {
+            ////CurrentSession.CurrentUrl = Request.RawUrl;
+            ////ViewBag.CurrentUrl = CurrentSession.CurrentUrl;
+        }
+
         protected static ICurrentSession CurrentSession
         {
             get
@@ -80,6 +86,11 @@ namespace India.Agency.Core.Web
                     Response.SetCookie(languageCookie);
                 }
             }
+        }
+
+        protected override bool DisableAsyncSupport
+        {
+            get { return true; }
         }
 
         /// <summary>

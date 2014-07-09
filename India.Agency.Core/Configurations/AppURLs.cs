@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------
-// <copyright file="AppURLs.cs" company="Nexcel Solutions Vietnam">
+// <copyright file="AppUrls.cs" company="Nexcel Solutions Vietnam">
 // Copyright (c) Nexcel Solutions Vietnam. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------
@@ -14,11 +14,11 @@ namespace India.Agency.Core.Configurations
     /// <summary>
     /// Custom URLs for application.
     /// </summary>
-    public class AppURLs : ConfigurationSection
+    public class AppUrls : ConfigurationSection
     {
-        private static AppURLs settings = ConfigurationManager.GetSection("IndiaAgency.AppURLs") as AppURLs;
+        private static AppUrls settings = ConfigurationManager.GetSection("IndiaAgency.AppURLs") as AppUrls;
 
-        public static AppURLs URLs
+        public static AppUrls Urls
         {
             get
             {
