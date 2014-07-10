@@ -26,9 +26,21 @@ namespace India.Agency.Account.Controllers
         /// Goes to Login page.
         /// </summary>
         /// <returns>Return Login View.</returns>
+        [HttpGet]
         public ActionResult Index(LoginInfo loginInfo = null)
         {
-            loginInfo = loginInfo ?? new LoginInfo();
+            if (loginInfo != null)
+            {
+                if (this.Language != loginInfo.SelectedLanguage)
+                {
+                    this.Language = loginInfo.SelectedLanguage;
+                }
+            }
+            else
+            {
+                loginInfo = new LoginInfo();
+                loginInfo.SelectedLanguage = this.Language;
+            }
 
             return View(loginInfo);
         }
