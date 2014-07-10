@@ -1,5 +1,5 @@
 ﻿/* File Created: July 9, 2014 */
-/* global Namespace, India, core, language */
+/* global Namespace, India, core, language, helpers */
 'use strict';
 
 Namespace.Register("India.Agency.CustomerList");
@@ -35,9 +35,10 @@ India.Agency.CustomerList = function () {
         });
 
         // Initialize date picker.
-        domElements.dpkDate.datetimepicker({
-            pickTime: false,
-            language: core.AppSettings.SelectedLanguage
+        helpers.CreateDatePicker(domElements.dpkDate, {
+            minDate: '07/01/2014',
+            maxDate: '07/31/2014',
+            defaultDate: '07/01/2014'
         });
 
         // Handle click event on Search button.

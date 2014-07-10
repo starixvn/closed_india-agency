@@ -234,6 +234,7 @@
     <Content Include="Content\Themes\Images\logo.png" />
     <Content Include="Content\Themes\Images\sprites.png" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\helpers.js" />
     <Content Include="Scripts\AngularJs\angular.min.js" />
     <Content Include="Scripts\AutoNumeric\auto-numeric.js" />
     <Content Include="Scripts\Bootstrap\bootstrap-datetimepicker.min.js" />

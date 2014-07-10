@@ -89,7 +89,8 @@ namespace India.Agency.Websites
                 "~/Scripts/Fanex.Grid/Fanex.Pagination.js",
                 "~/Scripts/Namespace/namespace.js",
                 "~/Scripts/extensions.js",
-                "~/Scripts/core.js"));
+                "~/Scripts/core.js",
+                "~/Scripts/helpers.js"));
 
             bundles.Add(new ScriptBundle("~/scripts/languages").Include(
                 "~/Scripts/ResourceJs/language.js",

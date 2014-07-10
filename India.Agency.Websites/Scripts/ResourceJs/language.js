@@ -1,5 +1,6 @@
 ﻿/* File Created: July 9, 2014 */
-/* global Namespace, India, core */
+/* global Namespace, India */
+/* exported language */
 'use strict';
 
 Namespace.Register("India.Agency.Language");
