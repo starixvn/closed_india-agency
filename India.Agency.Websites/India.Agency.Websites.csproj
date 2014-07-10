@@ -234,6 +234,7 @@
     <Content Include="Content\Themes\Images\hierarchy.png" />
     <Content Include="Content\Themes\Images\icon-arrow-left.png" />
     <Content Include="Content\Themes\Images\icon-search.png" />
+    <Content Include="Content\Themes\Images\loading.gif" />
     <Content Include="Content\Themes\Images\logo.png" />
     <Content Include="Content\Themes\Images\sprites.png" />
     <Content Include="Global.asax" />
