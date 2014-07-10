@@ -63,6 +63,7 @@ namespace India.Agency.Websites
             bundles.AddAndInclude(
                 "~/styles/common",
                 "~/Content/Bootstrap/CSS/bootstrap.css",
+                "~/Content/Bootstrap/CSS/bootstrap-datetimepicker.css",
                 "~/Content/Select2/select2.css",
                 "~/Content/Themes/icon.less",
                 "~/Content/Fanex.Grid/Fanex.Grid.css",
@@ -75,11 +76,12 @@ namespace India.Agency.Websites
                 "~/Areas/Customer/Resources/Dashboard/dashboard.less");
 
             bundles.Add(new ScriptBundle("~/scripts/common").Include(
+                "~/Scripts/MomentJs/moment.js",
+                "~/Scripts/NumeralJs/numeral.js",
                 "~/Scripts/jQuery/jQuery.js",
                 "~/Scripts/Bootstrap/bootstrap.js",
+                "~/Scripts/Bootstrap/bootstrap-datetimepicker.min.js",
                 "~/Scripts/Select2/select2.js",
-                "~/Scripts/MomentJs/moment-langues.js",
-                "~/Scripts/NumeralJs/numeral.js",
                 "~/Scripts/NiceScroll/jquery.nicescroll.min.js",
                 "~/Scripts/Mutate/mutate.events.js",
                 "~/Scripts/Mutate/mutate.min.js",
@@ -94,7 +96,11 @@ namespace India.Agency.Websites
                 "~/Scripts/ResourceJs/Labels.js",
                 "~/Scripts/ResourceJs/Labels.en-US.js",
                 "~/Scripts/ResourceJs/Labels.gu-IN.js",
-                "~/Scripts/ResourceJs/Labels.hi-IN.js"));
+                "~/Scripts/ResourceJs/Labels.hi-IN.js",
+                "~/Scripts/MomentJs/Languages/en-US.js",
+                "~/Scripts/MomentJs/Languages/hi-IN.js",
+                "~/Scripts/MomentJs/Languages/zh-CN.js",
+                "~/Scripts/MomentJs/Languages/zh-TW.js"));
         }
 
         /// <summary>

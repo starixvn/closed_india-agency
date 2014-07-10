@@ -9,6 +9,7 @@ India.Agency.CustomerList = function () {
     var domElements = {
         txtUsername: null,
         ddlStatus: null,
+        dpkDate: null,
         btnSearch: null,
         divBreadcrumb: null,
         divCustomerListContainer: null,
@@ -19,6 +20,7 @@ India.Agency.CustomerList = function () {
     var cacheDomElements = function () {
         domElements.txtUsername = $('#txtUsername');
         domElements.ddlStatus = $('#ddlStatus');
+        domElements.dpkDate = $('#dpkDate');
         domElements.btnSearch = $('#btnSearch');
         domElements.divBreadcrumb = $('#divBreadcrumb');
         domElements.divCustomerListContainer = $('#divCustomerListContainer');
@@ -30,6 +32,12 @@ India.Agency.CustomerList = function () {
         // Enter on Username textbox takes the same action as clicking on Search button.
         domElements.txtUsername.on('keyup.india-agency', function () {
             domElements.btnSearch.click();
+        });
+
+        // Initialize date picker.
+        domElements.dpkDate.datetimepicker({
+            pickTime: false,
+            language: core.AppSettings.SelectedLanguage
         });
 
         // Handle click event on Search button.

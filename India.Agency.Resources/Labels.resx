@@ -201,4 +201,7 @@
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
 </root>

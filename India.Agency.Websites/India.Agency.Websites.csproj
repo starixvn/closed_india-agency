@@ -176,6 +176,8 @@
   <ItemGroup>
     <Content Include="Areas\Customer\Resources\CustomerList\customerList.js" />
     <Content Include="Areas\Customer\Resources\Home\layout.js" />
+    <Content Include="Content\Bootstrap\CSS\bootstrap-datetimepicker.css" />
+    <Content Include="Content\Bootstrap\CSS\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\Bootstrap\CSS\bootstrap-theme.css" />
     <Content Include="Content\Bootstrap\CSS\bootstrap-theme.min.css" />
     <Content Include="Content\Bootstrap\CSS\bootstrap.css" />
@@ -234,6 +236,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\AngularJs\angular.min.js" />
     <Content Include="Scripts\AutoNumeric\auto-numeric.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\core.js" />
@@ -250,7 +253,12 @@
     <Content Include="Scripts\Fanex.Grid\Language\Fanex.Gird.Lang.zh-TW.js" />
     <Content Include="Scripts\HeadJs\head.min.js" />
     <Content Include="Scripts\jQuery\jQuery.js" />
+    <Content Include="Scripts\MomentJs\Languages\en-US.js" />
+    <Content Include="Scripts\MomentJs\Languages\hi-IN.js" />
+    <Content Include="Scripts\MomentJs\Languages\zh-CN.js" />
+    <Content Include="Scripts\MomentJs\Languages\zh-TW.js" />
     <Content Include="Scripts\MomentJs\moment-langues.js" />
+    <Content Include="Scripts\MomentJs\moment.js" />
     <Content Include="Scripts\Mutate\mutate.events.js" />
     <Content Include="Scripts\Mutate\mutate.min.js" />
     <Content Include="Scripts\Namespace\namespace.js" />
