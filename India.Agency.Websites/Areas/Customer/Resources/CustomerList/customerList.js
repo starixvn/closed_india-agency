@@ -53,7 +53,7 @@ India.Agency.CustomerList = function () {
             columns: [{ HeaderText: '#', Width: 70, Name: 'ColNo', HeaderAlign: 'center', CellAlign: 'center' },
                       { HeaderText: language.GetString('Action'), Width: 100, Name: 'ColAction', HeaderAlign: 'center', CellAlign: 'center' },
                       { HeaderText: language.GetString('Username'), Width: 300, Name: 'ColUsername', HeaderAlign: 'center', CellAlign: 'left' },
-                      { HeaderText: language.GetString('Status'), Width: 100, Name: 'ColStatus', HeaderAlign: 'center', CellAlign: 'right' },
+                      { HeaderText: language.GetString('Status'), Width: 100, Name: 'ColStatus', HeaderAlign: 'center', CellAlign: 'center' },
                       { HeaderText: language.GetString('Downlines'), Width: 100, Name: 'ColDownlines', HeaderAlign: 'center', CellAlign: 'center' },
                       { HeaderText: language.GetString('TotalOfMembers'), Width: 100, Name: 'ColTotalOfMembers', HeaderAlign: 'center', CellAlign: 'right',
                           FormatNumber: core.Formats.IntegerFormat
@@ -80,9 +80,9 @@ India.Agency.CustomerList = function () {
         for (var i = 0; i < 1000; i++) {
             row = {
                 Columns: [{ Name: 'ColNo', Value: i + 1},
-                      { Name: 'ColAction', Value: '<span></span>' },
+                      { Name: 'ColAction', Value: '<span class="icon-action"></span>' },
                       { Name: 'ColUsername', Value: 'Test123' },
-                      { Name: 'ColStatus', Value: 'Closed' },
+                      { Name: 'ColStatus', Value: '<span class="icon-opened-status">Open</span>' },
                       { Name: 'ColDownlines', Value: '12' },
                       { Name: 'ColTotalOfMembers', Value: 1234 },
                       { Name: 'ColGivenCredit', Value: 100000000 },

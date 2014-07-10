@@ -70,8 +70,16 @@ input, select {
         .select2-arrow {
             background: none;
             border-left: none;
+
+            b {
+                background-position: 0 -1px;
+            }
         }
     }
+}
+
+.select2-drop-active {
+    border-color: @element-border;
 }
 
 .select2-container, .select2-drop, .select2-search, .select2-search {
@@ -112,7 +120,7 @@ input, select {
             height: 14px;
 
             &.glyphicon-calendar.glyphicon {
-                background: url(images/sprites.png) -408px -7px no-repeat;
+                background: url(images/sprites.png) -469px -7px no-repeat;
                 
                 &:before {
                     content: "";
@@ -156,6 +164,7 @@ input, select {
                             color: #fff;
                             font-size: @font-size + 8;
                             font-weight: normal;
+                            padding: 2px 5px 7px;
 
                             &.disabled {
                                 color: #ccc;
@@ -196,7 +205,7 @@ input, select {
                     }
 
                     &.today:before {
-                        border-bottom-color: #2b88d8;
+                        border-bottom-color: #e6a354;
                     }
                 }
             }
