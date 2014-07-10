@@ -79,6 +79,7 @@ input, select {
 
 /* Customize Grid */
 .freegrid {
+    font-size: @font-size;
     color: @table-color;
     border-color: @table-border;
 
@@ -95,12 +96,94 @@ input, select {
         border-color: @table-border;
     }
 
+    .freegrid-even td {
+        background-color: #f5f7f9;
+    }
+
+    tr.highlight-row:hover td {
+        background: #fdfce6;
+    }
+
     .grid-pager {
         border-color: @table-border;
         background: #f2f4fc;
 
         #pagination div.itemperpage {
             color: @table-color;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        #itemperpage {
+            height: 19px;
+            border: 1px solid #cfcfcf;
+            .border-radius(2px);
+        }
+
+        .numberlist {
+            border-color: #cfcfcf;
+            background: #fff;
+            padding: 0;
+            .border-radius(2px);
+
+            ul li {
+                padding: 0;
+
+                &.sep {
+                    background: none;
+                }
+            }
+        }
+
+        #pagination {
+            font-family: @font-family;
+
+            a, span {
+                margin: 0;
+                padding: 1px 6px 2px;
+                line-height: 13px;
+                color: #589cc9;
+                border-right: 1px solid #cfcfcf;
+                .border-radius(0);
+                font-weight: normal;
+            }
+
+            a:hover, .current {
+                 background: #668CB0;
+                 color: #fff;
+            }
+            
+            .current.prev, .current.next {
+                background: #eae9e9;
+                color: #7f7f7f;
+            }
+
+            a.prev, a.next {
+                &:hover {
+                    background: #668CB0;
+                    color: #fff;
+                }
+            }
+
+            .numberlist ul li .next {
+                border: none;
+            }
+
+            .gotopage_box {
+                td {
+                    padding: 2px 5px !important;
+                }
+
+                .txt {
+                    height: 17px;
+                    border-color: #cfcfcf;
+                    padding: 3px !important;
+                }
+            }
+
+            div.detailtext {
+                margin: 0;
+            }
         }
     }
 }

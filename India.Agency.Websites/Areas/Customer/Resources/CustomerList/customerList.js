@@ -76,8 +76,9 @@ India.Agency.CustomerList = function () {
         var bodyData = [];
         var row;
 
-        row = {
-            Columns: [{ Name: 'ColNo', Value: 1 },
+        for (var i = 0; i < 1000; i++) {
+            row = {
+                Columns: [{ Name: 'ColNo', Value: i + 1},
                       { Name: 'ColAction', Value: '<span></span>' },
                       { Name: 'ColUsername', Value: 'Test123' },
                       { Name: 'ColStatus', Value: 'Closed' },
@@ -85,9 +86,9 @@ India.Agency.CustomerList = function () {
                       { Name: 'ColTotalOfMembers', Value: 1234 },
                       { Name: 'ColGivenCredit', Value: 100000000 },
                       { Name: 'ColUsedCredit', Value: 100000000}]
-        };
-        bodyData.push(row);
-
+            };
+            bodyData.push(row);
+        }
         gridOptions.bodyRows = bodyData;
         domElements.divCustomerListContainer.removeClass('hide');
         domElements.divCustomerList.fanexGrid(gridOptions);
