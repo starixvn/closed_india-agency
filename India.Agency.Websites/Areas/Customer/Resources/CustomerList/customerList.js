@@ -65,6 +65,7 @@ India.Agency.CustomerList = function () {
                           FormatNumber: core.Formats.DecimalFormat
                       }],
             gridExpandHeight: 180,
+            bodyRowHeight: 27,
             showNumberColumn: true,
             showPager: true,
             pagerOption: {
