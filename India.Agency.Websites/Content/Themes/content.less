@@ -64,6 +64,7 @@ input, select {
     .select2-choice{
         border: 1px solid @element-border;
         background: none;
+        line-height: 23px;
         .border-radius(0);
 
         .select2-arrow {
@@ -73,9 +74,135 @@ input, select {
     }
 }
 
-.select2-container, .select2-drop, .select2-search, .select2-search input {
+.select2-container, .select2-drop, .select2-search, .select2-search {
     min-width: 80px;
 }
+
+.select2-search input {
+    height: 25px !important;
+}
+
+.select2-results .select2-highlighted {
+    background: #859CB4;
+    color: #fff;
+}
+
+/* Customize calendar */
+
+.input-group.date {
+    input, .input-group-addon {
+        padding: 5px;
+        height: 25px;
+        background: #fff;
+        font-size: @font-size;
+        border-color: @element-border;
+        .border-radius(0);
+    }
+    
+    input.form-control {
+        border-right: none;
+        width: 85px;
+        .box-shadow(none);
+    }
+
+    .input-group-addon {
+        padding: 4px 2px;
+
+        span {
+            height: 14px;
+
+            &.glyphicon-calendar.glyphicon {
+                background: url(images/sprites.png) -408px -7px no-repeat;
+                
+                &:before {
+                    content: "";
+                }
+            }
+        }
+    }
+}
+
+.bootstrap-datetimepicker-widget {
+    width: 220px;
+    padding: 0;
+    .border-radius(2px);
+
+    &.bottom:before, &.bottom:after {
+        border-bottom: none;
+    }
+
+    .datepicker {
+        .table-condensed {
+            font-size: @font-size;
+
+            thead {
+                tr:first-child {
+                    background: #e6a354;
+
+                    th {
+                        font-weight: bold;
+                        padding: 3px;
+
+                        &.switch {
+                            color: #fff;
+                        }
+
+                        &:hover {
+                            background: none;
+                        }
+
+                        &.next, &.prev {
+                            color: #fff;
+                            font-size: @font-size + 8;
+                            font-weight: normal;
+
+                            &.disabled {
+                                color: #a06e32;
+                            }
+                        }
+                    }
+                }
+
+                tr {
+                    th {
+                        line-height: 21px;
+                        padding: 7px 3px;
+                        color: @link-color;
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            td {
+                color: #505050;
+
+                &.day {
+                    line-height: 20px;
+                    padding: 3px;
+
+                    &.new.disabled {
+                        color: #bfbfbf;
+                    }
+
+                    &:hover {
+                        background: #e9e9e9;
+                    }
+
+                    &.active, &.active:hover {
+                        background: #e6a354;
+                        color: #fff;
+                        .border-radius(2px);
+                    }
+
+                    &.today:before {
+                        border-bottom-color: #2b88d8;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 /* Customize Grid */
 .freegrid {
@@ -104,9 +231,13 @@ input, select {
         background: #fdfce6;
     }
 
+    .grid-pager-content {
+        padding-top: 3px;
+    }
+
     .grid-pager {
         border-color: @table-border;
-        background: #f2f4fc;
+        background: #e4e9f4;
 
         #pagination div.itemperpage {
             color: @table-color;
@@ -115,13 +246,13 @@ input, select {
         }
 
         #itemperpage {
-            height: 19px;
-            border: 1px solid #cfcfcf;
+            height: 20px;
+            border: 1px solid #C5C5C5;
             .border-radius(2px);
         }
 
         .numberlist {
-            border-color: #cfcfcf;
+            border-color: #C5C5C5;
             background: #fff;
             padding: 0;
             .border-radius(2px);
@@ -140,10 +271,10 @@ input, select {
 
             a, span {
                 margin: 0;
-                padding: 1px 6px 2px;
+                padding: 1px 6px 3px;
                 line-height: 13px;
-                color: #589cc9;
-                border-right: 1px solid #cfcfcf;
+                color: @link-color;
+                border-right: 1px solid @table-border;
                 .border-radius(0);
                 font-weight: normal;
             }
@@ -176,7 +307,7 @@ input, select {
 
                 .txt {
                     height: 17px;
-                    border-color: #cfcfcf;
+                    border-color: @table-border;
                     padding: 3px !important;
                 }
             }
