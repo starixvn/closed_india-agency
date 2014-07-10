@@ -21,7 +21,8 @@ namespace India.Agency.Core.ViewModels
         private static readonly List<SelectListItem> SupportedLanguages = new List<SelectListItem>
         {
             new SelectListItem { Text = "English", Value = "en-US" },
-            new SelectListItem { Text = "हिन्दी", Value = "hi-IN" }
+            new SelectListItem { Text = "हिन्दी", Value = "hi-IN" },
+            new SelectListItem { Text = "ગુજરાતી", Value = "gu-IN" }
         };
 
         public static string DefaultLanguage
@@ -32,7 +33,7 @@ namespace India.Agency.Core.ViewModels
             }
         }
 
-        public static IList<SelectListItem> Languages
+        public static List<SelectListItem> Languages
         {
             get
             {

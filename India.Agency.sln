@@ -10,7 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeAnalysis", "CodeAnalysis", "{DFD7EACD-3575-4D1E-A96D-4AD7FBAE363E}"
 	ProjectSection(SolutionItems) = preProject
 		CodeAnalysis\CodeAnalysisConfiguration.xml = CodeAnalysis\CodeAnalysisConfiguration.xml
-		CodeAnalysis\FxCopDictionary.xml = CodeAnalysis\FxCopDictionary.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "India.Agency.Account", "India.Agency.Account\India.Agency.Account.csproj", "{04B003BD-EC89-49D1-971A-662C3572B6FD}"

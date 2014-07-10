@@ -1,0 +1,53 @@
+﻿@using India.Agency.Account.ViewModels.Login
+@model LoginInfo
+@{
+    SelectListItem selectedLanguage = Model.Languages.FirstOrDefault(lang => lang.Value == Model.SelectedLanguage);
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@Labels.SportAgency</title>
+    <link href="~/content/themes/images/favicon.ico" rel="shortcut icon">
+    @Styles.Render("~/styles/login")
+    @Scripts.Render("~/scripts/headjs")
+</head>
+<body>
+</body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.SelectedLanguage)
+            <div>
+                <div>
+                    <div>@Labels.SignIn</div>
+                    <div class="flagList">
+                        <span class="flag @selectedLanguage.Value"></span> @selectedLanguage.Text <span class="icon-arrow-down"></span>
+                        <ul class="list-unstyled list">
+                            @foreach (SelectListItem language in Model.Languages)
+                            {
+                                <li><a href="#"><span class="flag @language.Value"></span>@language.Text</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="control-group">
+                        @Html.TextBoxFor(m => m.Username, new { @class = "input-text", autocomplete = "off", placeholder = Labels.Username })
+                    </div>
+                    <div class="control-group">
+                        @Html.PasswordFor(m => m.Password, new { @class = "input-text", autocomplete = "off", placeholder = Labels.Password })
+                    </div>
+                    <div class="control-group">
+                        <input id="btnSubmit" type="submit" value="@Labels.Login" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    @Scripts.Render("~/scripts/login")
+    @Scripts.Render("~/scripts/languages")
+</html>

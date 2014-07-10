@@ -1,0 +1,48 @@
+.flagList {
+    padding: 0;
+    color: #fff;
+    position: relative;
+    width: 100px;
+    cursor: pointer;
+
+    .flag {
+        float:left;
+        background: url(Images/flags.png) no-repeat;
+        height: 22px;
+        width: 32px;
+        margin-right: 2px;
+
+        &.en-US {
+            background-position: 5px 1px;
+        }
+
+        &.hi-IN, &.gu-IN {
+            background-position: 5px -42px;
+        }
+    }
+
+    .active {
+        width: 110px;
+        padding-top: 5px;
+    }
+
+    &:hover .list {
+        display: block;
+    }
+
+    .list {
+        top: 30px;
+        left: 0;
+        right: 0;
+        z-index: 500;
+        display: none;
+
+        li {
+            padding: 0;
+
+            a {
+                padding: 5px 0;
+            }
+        }
+    }
+}

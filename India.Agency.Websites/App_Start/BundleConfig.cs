@@ -24,6 +24,7 @@ namespace India.Agency.Websites
         {
             RegisterLayoutBundles(bundles);
             RegisterCommonBundles(bundles);
+            RegisterLoginBundles(bundles);
             RegisterCustomerBundles(bundles);
         }
 
@@ -102,6 +103,23 @@ namespace India.Agency.Websites
                 "~/Scripts/MomentJs/Languages/hi-IN.js",
                 "~/Scripts/MomentJs/Languages/zh-CN.js",
                 "~/Scripts/MomentJs/Languages/zh-TW.js"));
+        }
+
+        /// <summary>
+        /// Bundles JavaScript and LESS files for Login page.
+        /// </summary>
+        /// <param name="bundles">The bundle collection.</param>
+        public static void RegisterLoginBundles(BundleCollection bundles)
+        {
+            bundles.AddAndInclude(
+                "~/styles/login",
+                "~/Areas/Account/Resources/Login/Themes/Login/login*");
+
+            bundles.Add(new ScriptBundle("~/scripts/login").Include(
+                "~/Scripts/Namespace/namespace.js",
+                "~/Scripts/MomentJs/moment.js",
+                "~/Scripts/CryptoJs/CryptoJs.js",
+                "~/Areas/Account/Resources/Login/login.js"));
         }
 
         /// <summary>

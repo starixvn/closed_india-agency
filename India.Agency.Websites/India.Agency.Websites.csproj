@@ -174,6 +174,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Account\Resources\Login\login.js" />
+    <Content Include="Areas\Account\Resources\Login\Themes\Login.Xmas\Images\flags.png" />
+    <Content Include="Areas\Account\Resources\Login\Themes\Login\Images\flags.png" />
     <Content Include="Areas\Customer\Resources\CustomerList\customerList.js" />
     <Content Include="Areas\Customer\Resources\Home\layout.js" />
     <Content Include="Content\Bootstrap\CSS\bootstrap-datetimepicker.css" />
@@ -308,6 +311,10 @@
     <Content Include="Areas\Customer\Views\Home\_TopMenus.cshtml" />
     <Content Include="Areas\Customer\Views\Home\_LeftPanel.cshtml" />
     <Content Include="Areas\Customer\Views\CustomerList\Index.cshtml" />
+    <Content Include="Areas\Account\Views\Web.config" />
+    <Content Include="Areas\Account\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Account\Resources\Login\Themes\Login\login.less" />
+    <Content Include="Areas\Account\Resources\Login\Themes\Login.Xmas\login.xmas.less" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -333,9 +340,9 @@
     </Content>
     <None Include="Content\Bootstrap\CSS\bootstrap-theme.css.map" />
     <None Include="Content\Bootstrap\CSS\bootstrap.css.map" />
-    <None Include="Content\Bootstrap\Fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Content\Bootstrap\Fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="Content\Bootstrap\Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Bootstrap\Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Bootstrap\Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Bootstrap\Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Themes\content.less" />
     <Content Include="Content\Themes\mixins.less" />
     <Content Include="Content\Themes\layout.less" />
